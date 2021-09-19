@@ -1,0 +1,453 @@
+.experienceSection {
+    padding: 75px 0;
+    background: #f7f7f7;
+    text-align: center;
+}
+
+.headerSection {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.titleSection {
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-align: center;
+    color: #555555;
+    text-transform: uppercase;
+    padding: 20px 0;
+}
+
+.spacingBar {
+    background: #3ebdf0;
+    width: 100px;
+    height: 2px;
+    margin: auto;
+}
+
+.timelineGlyph {
+    position: relative;
+    padding: 20px 0;
+    list-style: none outside none;
+    margin: 0;
+}
+
+.timelineGlyph:before {
+    content: ' ';
+    height: 100%;
+    opacity: 0.3;
+    position: absolute;
+    right: 50%;
+    top: 0;
+    width: 1px;
+    background: rgb(143, 143, 143) none repeat scroll 0 0 / auto padding-box border-box;
+}
+
+.timelineSection {
+    position: relative;
+    margin: 0 0 20px;
+}
+
+.timelineSection:after {
+    clear: both;
+    content: ' ';
+    display: table;
+}
+
+.timelineGlyphDiv {
+    color: rgb(255, 255, 255);
+    height: 50px;
+    position: absolute;
+    text-align: center;
+    right: 47.8%;
+    top: 16px;
+    width: 50px;
+    background: #3ebdf0 none repeat scroll 0 0 / auto padding-box border-box;
+    border: 3px solid rgba(0, 0, 0, 0);
+    border-radius: 50% 50% 50% 50%;
+    font-weight: 400;
+    font-size: 18.2px;
+    line-height: 50px;
+}
+
+.timelineCard {
+    bottom: 0;
+    position: relative;
+    width: 46%;
+    border: 1px solid rgba(0, 0, 0, .125);
+    padding: 30px;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.timelineCard:before {
+    content: ' ';
+    position: absolute;
+    right: -15px;
+    top: 26px;
+    width: 15px;
+    border-top: 15px solid rgba(0, 0, 0, 0);
+    border-right: 0 solid rgb(143, 143, 143);
+    border-bottom: 15px solid rgba(0, 0, 0, 0);
+    border-left: 15px solid rgb(143, 143, 143);
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.timelineCardDates {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    text-transform: uppercase;
+    width: 32%;
+    background: rgb(103, 103, 103) none repeat scroll 0 0 / auto padding-box border-box;
+    font-size: 12px;
+    line-height: 19.2px;
+    font-family: "Open Sans", Arial;
+    padding: 6px 18px;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.timelineCardBody {
+    text-align: left;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: "Open Sans", Arial;
+}
+
+.timelineCardCompany {
+    box-sizing: border-box;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font: normal normal 400 normal 22px / 28.6px "Open Sans", Arial;
+    margin: 24px 0 10px;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.timelineCardPosition {
+    color: rgb(143, 143, 143);
+    height: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font: normal normal 500 normal 14px / 15.4px "Open Sans", Arial;
+    margin: 10px 0 8px;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.timelineCardInverted {
+    color: rgb(47, 47, 47);
+    float: right;
+    bottom: 0;
+    position: relative;
+    width: 46%;
+    border: 1px solid rgba(0, 0, 0, .125);
+    padding: 30px;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.timelineCardInverted:before {
+    content: ' ';
+    position: absolute;
+    right: 510px;
+    top: 26px;
+    width: 15px;
+    border-top: 15px solid rgba(0, 0, 0, 0);
+    border-right: 15px solid rgb(143, 143, 143);
+    border-bottom: 15px solid rgba(0, 0, 0, 0);
+    border-left: 0 solid rgb(143, 143, 143);
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.timelineWsuCardImage {
+    min-height: 250px;
+    background: rgba(0, 0, 0, 0) url(https://i.ytimg.com/vi/Mh3-G1HemWY/maxresdefault.jpg);
+    background-size: 100%;
+    transition: all 0.5s ease-in-out 0s;
+    background-repeat: no-repeat;
+    background-position-y: -25px;
+}
+
+.timelineOmniCardImage {
+    min-height: 250px;
+    background: rgba(0, 0, 0, 0) url("/omni.png");
+    background-size: 100%;
+    transition: all 0.5s ease-in-out 0s;
+    background-repeat: no-repeat;
+}
+
+.timelineSmgInternCardImage {
+    min-height: 250px;
+    background: rgba(0, 0, 0, 0) url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/cc86d11317771.58a4b9ce6e078.jpg");
+    background-size: 100%;
+    transition: all 0.5s ease-in-out 0s;
+    background-repeat: no-repeat;
+}
+
+.timelineSmgCardImage {
+    min-height: 250px;
+    background: rgba(0, 0, 0, 0) url("https://www.nyse.com/publicdocs/nyse/events/images/Scotts-MiracleGro-Company_640x360.png");
+    background-size: 100%;
+    transition: all 0.5s ease-in-out 0s;
+    background-repeat: no-repeat;
+}
+
+.timelineCardinalCardImage {
+    min-height: 240px;
+    background: rgba(0, 0, 0, 0) url("/Cardinal_Health_Logo.png");
+    background-size: 100%;
+    transition: all 0.5s ease-in-out 0s;
+    background-repeat: no-repeat;
+    background-position-x: -30px;
+    background-position-y: 40px;
+}
+
+.timelineEndBar {
+    background: #3ebdf0;
+    width: 100px;
+    height: 3px;
+    margin: auto;
+}
+
+.timelineFa {
+    font-size: 30px;
+}
+
+.timelineList {
+    padding-left: 4%;
+}
+
+.timelineBarStart {
+    background: #3ebdf0;
+    width: 55px;
+    height: 2px;
+    float: right;
+    margin-right: -8%;
+    display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+    .phpGlyph {
+        font-size: 45px;
+    }
+
+    .phpText {
+        margin-top: 38%;
+    }
+
+    .skillText {
+        font-size: 22px;
+    }
+
+    .timelineGlyphDiv {
+        color: rgb(255, 255, 255);
+        height: 50px;
+        position: absolute;
+        right: 5.4%;
+        top: 16px;
+        width: 50px;
+        background: #3ebdf0 none repeat scroll 0 0 / auto padding-box border-box;
+        border: 3px solid rgba(0, 0, 0, 0);
+        border-radius: 50% 50% 50% 50%;
+        font-weight: 400;
+        font-size: 18.2px;
+        line-height: 50px;
+    }
+
+    .timelineCardDates {
+        width: 40%;
+    }
+
+    .timelineGlyph:before {
+        content: ' ';
+        height: 100%;
+        opacity: 0.3;
+        position: absolute;
+        right: 8%;
+        top: 0;
+        width: 1px;
+        background: rgb(143, 143, 143) none repeat scroll 0 0 / auto padding-box border-box;
+    }
+
+    .timelineBarStart, .timelineEndBar {
+        background: #3ebdf0;
+        width: 55px;
+        height: 2px;
+        float: right;
+        margin-right: 5.4%;
+        display: block;
+    }
+
+    .timelineCard, .timelineCardInverted {
+        bottom: 0;
+        position: relative;
+        width: 70%;
+        border: 1px solid rgba(0, 0, 0, .125);
+        padding: 30px;
+        transition: all 0.5s ease-in-out 0s;
+        float: none;
+        margin: 0 auto;
+    }
+
+    .timelineCardInverted:before {
+        content: ' ';
+        position: absolute;
+        right: -15px;
+        top: 26px;
+        width: 15px;
+        border-top: 15px solid rgba(0, 0, 0, 0);
+        border-right: 0 solid rgb(143, 143, 143);
+        border-bottom: 15px solid rgba(0, 0, 0, 0);
+        border-left: 15px solid rgb(143, 143, 143);
+        transition: all 0.5s ease-in-out 0s;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .timelineWsuCardImage,
+    .timelineOmniCardImage,
+    .timelineSmgInternCardImage,
+    .timelineSmgCardImage,
+    .timelineCardinalCardImage {
+        background-position-x: 0;
+        background-position-y: 65%;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .phpText {
+        margin-top: 25%;
+    }
+
+    .phpGlyph {
+        font-size: 60px;
+    }
+
+    .skillCards {
+        height: 255px;
+    }
+
+    .donutInner {
+        margin-top: -60%;
+    }
+
+    .donutInnerFa {
+        margin-bottom: 15%;
+    }
+
+    .timelineGlyphDiv {
+        right: 4.7%;
+    }
+
+    .timelineBarStart, .timelineEndBar {
+        margin-right: 4.4%;
+    }
+    .timelineCardDates {
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .introContainer {
+        top: 30%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .introName {
+        font-size: 45px;
+    }
+
+    .introTitle {
+        font-size: 20px;
+    }
+
+    .pChart {
+        margin: 0 auto;
+        max-width: 50%;
+    }
+
+    .donutInner {
+        margin-top: -32%;
+    }
+
+    .skillText {
+        margin-top: 15%;
+    }
+
+    .phpText {
+        margin-top: 15%;
+    }
+
+    .timelineCardDates {
+        width: 40%;
+    }
+
+    .timelineBarStart, .timelineEndBar {
+        margin-right: 4%;
+    }
+
+    .timelineCard, .timelineCardCard {
+        margin: 0;
+        width: 80%;
+    }
+
+    .timelineGlyphDiv {
+        right: 4.5%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .pChart {
+        margin: 0 auto;
+        max-width: 60%;
+    }
+
+    .donutInner {
+        margin-top: -40%;
+    }
+
+    .skillText {
+        margin-top: 7%;
+
+    }
+
+    .phpText {
+        margin-top: 16%;
+    }
+
+    .skillCards {
+        height: 185px;
+    }
+
+    .timelineBarStart, .timelineEndBar {
+        margin-right: 0;
+    }
+
+    .timelineCard, .timelineCardInverted {
+        margin: 0;
+        width: 80%;
+    }
+
+    .timelineCardDates {
+        width: 60%;
+    }
+
+    .timelineGlyphDiv {
+        right: 0.5%;
+    }
+
+    .timelineCardPosition {
+        margin: 10px 0 12px;
+    }
+
+    .timelineCard-dates {
+        width: 60%;
+    }
+
+    .timelineGlyph:before {
+        right: 6%;
+    }
+
+    .phpGlyph {
+        font-size: 45px;
+    }
+}

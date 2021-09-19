@@ -21,7 +21,8 @@ export const Education = (): JSX.Element => {
         <br/>
         <div className="row top-space">
           <div className="col-md-12">
-            <p>Bachelor of Computer Science - <strong>Graduated:</strong> 2018</p>
+            <p>Bachelor of Computer Science</p>
+            <p><strong>Graduated:</strong> 2018</p>
           </div>
         </div>
       </div>
