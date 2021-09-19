@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "audit:deps": "npm audit --audit-level=moderate --registry=https://registry.npmjs.org --production",
+    "audit:unused:deps": "npx depcheck . --config=.depcheckrc.json",
     "dev": "next dev",
     "build": "next build && next export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pipeline.readiness.check": "yarn run audit:unused:deps && yarn run audit:deps && yarn run lint && yarn run build"
   },
   "dependencies": {
     "next": "11.1.2",
