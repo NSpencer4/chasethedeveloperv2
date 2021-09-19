@@ -2,16 +2,8 @@
   "ignores": [
     "eslint",
     "@babel/*",
-    "identity-obj-proxy",
-    "@types/*",
-    "css-loader",
-    "style-loader",
-    "sass-loader",
-    "tslib",
-    "react-docgen-typescript-loader",
-    "@testing-library/*",
-    "@storybook/*",
-    "storybook-addons-abstract"
+    "eslint-config-airbnb",
+    "@types/*"
   ],
   "skip-missing": true,
   "ignore-bin-package": true
