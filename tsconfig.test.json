@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "src/global.d.ts",
+    "**/*.test.tsx",
+    "**/*.spec.tsx",
+    "**/setupTests.ts"
+  ]
+}
