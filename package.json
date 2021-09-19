@@ -10,6 +10,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
+    "prepare": "npx husky install",
     "pipeline.readiness.check": "yarn run audit:unused:deps && yarn run audit:deps && yarn run lint && yarn run build"
   },
   "dependencies": {
@@ -20,6 +21,8 @@
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.6",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
     "@testing-library/dom": "^8.5.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.1.0",
@@ -36,6 +39,7 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.25.2",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.2.0",
     "ts-jest": "^27.0.5",

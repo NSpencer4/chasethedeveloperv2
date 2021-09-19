@@ -5,6 +5,7 @@
     "eslint-config-airbnb",
     "@types/*",
     "@testing-library/*",
+    "@commitlint/*",
     "identity-obj-proxy"
   ],
   "skip-missing": true,

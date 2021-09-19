@@ -5,7 +5,7 @@ This project is a rewrite using React of my first interactive resume where I use
 - [x] Install eslint with strict rule sets
 - [x] Setup CI pipeline using Cloudflare Pages and GitHub Actions
 - [x] Setup NextJS SSG config
-- [] Install and configure Husky to enforce Conventional Commits
+- [x] Install and configure Husky to enforce Conventional Commits
 - [] Convert the Angular based chasethedeveloper.com to be React based
 - [] 100% unit test coverage
 - [] 100% integration test coverage
