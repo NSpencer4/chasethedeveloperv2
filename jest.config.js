@@ -1,6 +1,7 @@
 module.exports = {
     verbose: false,
     collectCoverage: true,
+    testEnvironment: 'jsdom',
     collectCoverageFrom: [
         'src/**/*.ts',
         '!src/**/*.test.ts'

@@ -29,3 +29,4 @@ jobs:
           yarn run audit:deps
           yarn run lint
           yarn run build
+          yarn run test

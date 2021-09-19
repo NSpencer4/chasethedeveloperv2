@@ -11,7 +11,7 @@
     "lint": "next lint",
     "test": "jest",
     "prepare": "npx husky install",
-    "pipeline.readiness.check": "yarn run audit:unused:deps && yarn run audit:deps && yarn run lint && yarn run build"
+    "pipeline.readiness.check": "yarn run audit:unused:deps && yarn run audit:deps && yarn run lint && yarn run build && yarn run test"
   },
   "dependencies": {
     "next": "11.1.2",
@@ -21,6 +21,8 @@
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.6",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.15.0",
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
     "@testing-library/dom": "^8.5.0",
@@ -30,6 +32,7 @@
     "@types/react": "17.0.21",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
     "@typescript-eslint/parser": "^4.31.1",
+    "classnames": "^2.3.1",
     "eslint": "7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-typescript": "^14.0.0",
