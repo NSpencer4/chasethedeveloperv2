@@ -3,7 +3,8 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { Intro } from '../components/Intro';
-
+import { Profile } from '../components/Profile';
+import 'bootstrap/dist/css/bootstrap.css';
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
@@ -14,7 +15,8 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <Intro></Intro>
+        <Intro />
+        <Profile />
       </main>
 
       <footer className={styles.footer}>

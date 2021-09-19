@@ -8,4 +8,3 @@ This project is a rewrite using React of my first interactive resume where I use
 - [x] Install and configure Husky to enforce Conventional Commits
 - [ ] Convert the Angular based chasethedeveloper.com to be React based
 - [ ] 100% unit test coverage
-- [ ] 100% integration test coverage
