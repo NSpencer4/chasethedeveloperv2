@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "audit:deps": "npm audit --audit-level=moderate --registry=https://registry.npmjs.org --production",
+    "audit:deps": "yarn audit --audit-level=moderate --registry=https://registry.npmjs.org --production",
     "audit:unused:deps": "npx depcheck . --config=.depcheckrc.json",
     "dev": "next dev",
     "build": "next build && next export",
