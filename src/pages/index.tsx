@@ -8,6 +8,7 @@ import { Skills } from '../components/Skills';
 import { Education } from '../components/Education';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Experience } from '../components/Experience';
+import { Portfolio } from '../components/Portfolio';
 
 const Home: NextPage = () => {
   return (
@@ -27,6 +28,7 @@ const Home: NextPage = () => {
         <Skills />
         <Education />
         <Experience />
+        <Portfolio />
       </main>
 
       <footer className={styles.footer}></footer>
