@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.css';
 import { Intro } from '../components/Intro';
 import { Profile } from '../components/Profile';
 import { Skills } from '../components/Skills';
+import { Education } from '../components/Education';
 import 'bootstrap/dist/css/bootstrap.css';
 
 const Home: NextPage = () => {
@@ -23,10 +24,10 @@ const Home: NextPage = () => {
         <Intro />
         <Profile />
         <Skills />
+        <Education />
       </main>
 
-      <footer className={styles.footer}>
-      </footer>
+      <footer className={styles.footer}></footer>
     </div>
   );
 };
