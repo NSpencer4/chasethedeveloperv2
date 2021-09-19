@@ -3,7 +3,9 @@
     "eslint",
     "@babel/*",
     "eslint-config-airbnb",
-    "@types/*"
+    "@types/*",
+    "@testing-library/*",
+    "identity-obj-proxy"
   ],
   "skip-missing": true,
   "ignore-bin-package": true
