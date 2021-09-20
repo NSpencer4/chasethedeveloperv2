@@ -2,7 +2,7 @@ import styles from './Education.module.css';
 
 export const Education = (): JSX.Element => {
   return (
-    <div className={styles.educationSection}>
+    <div data-testid="education-section" className={styles.educationSection}>
       <div className="container">
         <header data-testid="header-section" className={styles.headerSection}>
           <h2 data-testid="title-section" className={styles.titleSection}>Education</h2>

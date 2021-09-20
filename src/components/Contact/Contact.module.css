@@ -1,4 +1,4 @@
-.educationSection {
+.contactSection {
     padding: 75px 0;
     background: #f7f7f7;
     text-align: center;
@@ -27,6 +27,6 @@
 }
 
 .wsuPic {
-    max-width: 65%;
+    max-width: 80%;
     margin: 0 auto;
 }

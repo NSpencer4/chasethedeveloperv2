@@ -3,7 +3,7 @@ import cn from 'classnames';
 
 export const Portfolio = (): JSX.Element => {
   return (
-    <div className={styles.portfolioSection}>
+    <div data-testid="portfolio-section" className={styles.portfolioSection}>
       <div className="container">
         <header data-testid="header-section" className={styles.headerSection}>
           <h2 data-testid="title-section" className={styles.titleSection}>Portfolio</h2>
