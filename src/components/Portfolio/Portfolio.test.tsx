@@ -7,7 +7,7 @@ describe('<Portfolio />', () => {
 
     const renderedText: HTMLElement = screen.getByTestId('portfolio-section');
 
-    expect(renderedText).toHaveClass('educationSection');
+    expect(renderedText).toHaveClass('portfolioSection');
   });
   test('should render the header-section and apply the correct class name', () => {
     render(<Portfolio />);
