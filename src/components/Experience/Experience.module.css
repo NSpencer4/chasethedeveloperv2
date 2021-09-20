@@ -147,7 +147,7 @@
 .timelineCardInverted:before {
     content: ' ';
     position: absolute;
-    right: 510px;
+    right: 100%;
     top: 26px;
     width: 15px;
     border-top: 15px solid rgba(0, 0, 0, 0);
