@@ -1,0 +1,32 @@
+.contactSection {
+    padding: 75px 0;
+    background: #f7f7f7;
+    text-align: center;
+}
+
+.headerSection {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.titleSection {
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-align: center;
+    color: #555555;
+    text-transform: uppercase;
+    padding: 20px 0;
+}
+
+.spacingBar {
+    background: #3ebdf0;
+    width: 100px;
+    height: 2px;
+    margin: auto;
+}
+
+.wsuPic {
+    max-width: 80%;
+    margin: 0 auto;
+}

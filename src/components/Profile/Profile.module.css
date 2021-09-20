@@ -1,0 +1,67 @@
+#profileSection {
+    padding: 75px 0;
+    background: #f7f7f7;
+}
+
+.headerSection {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.titleSection {
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-align: center;
+    color: #555555;
+    text-transform: uppercase;
+    padding: 20px 0;
+}
+
+.spacingBar {
+    background: #3ebdf0;
+    width: 100px;
+    height: 2px;
+    margin: auto;
+}
+
+.subtitleSection {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.subtitleSection p {
+    font-size: 1.5em;
+}
+
+.profilePic {
+    border: 5px solid #333;
+    width: 225px;
+    height: 225px;
+    margin: 0 20px 20px 0;
+}
+
+.aboutMeImg {
+    max-width: 100%;
+    box-shadow: #000 5px 3px 0 0;
+    width: 60%;
+    border: 15px solid rgba(0, 0, 0, 0);
+    border-radius: 50% 50% 50% 50%;
+    margin-bottom: 40px;
+    transition: transform 0.4s ease-out 0s, opacity 0.4s ease-out 0s, -webkit-transform 0.4s ease-out 0s;
+}
+
+.aboutSection {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.aboutMeParagraph {
+    color: #000;
+    text-align: center;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 28px;
+    font-family: "Open Sans", Arial;
+    transition: opacity 0.6s ease-out 0s;
+}

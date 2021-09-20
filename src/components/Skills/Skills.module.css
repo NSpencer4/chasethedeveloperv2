@@ -1,0 +1,63 @@
+.skillsSection {
+    padding: 75px 0;
+    background: #f7f7f7;
+    text-align: center;
+}
+.headerSection {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.titleSection {
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-align: center;
+    color: #555555;
+    text-transform: uppercase;
+    padding: 20px 0;
+}
+
+.spacingBar {
+    background: #3ebdf0;
+    width: 100px;
+    height: 2px;
+    margin: auto;
+}
+
+.skillsImgDiv {
+    color: rgb(255, 255, 255);
+    width: 30%;
+    position: relative;
+    background: #3ebdf0 none repeat scroll 0 0 / auto padding-box border-box;
+    border: 3px solid rgba(0, 0, 0, 0);
+    border-radius: 50% 50% 50% 50%;
+    font-weight: 400;
+    font-size: 18.2px;
+    margin: 0 auto;
+    line-height: 50px;
+}
+.skillsFa {
+    font-size: 3em;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .skillsImgDiv {
+        color: rgb(255, 255, 255);
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .skillsImgDiv {
+        color: rgb(255, 255, 255);
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .skillsImgDiv {
+        color: rgb(255, 255, 255);
+        width: 100%;
+    }
+}

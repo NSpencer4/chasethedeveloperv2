@@ -6,6 +6,6 @@ This project is a rewrite using React of my first interactive resume where I use
 - [x] Setup CI pipeline using Cloudflare Pages and GitHub Actions
 - [x] Setup NextJS SSG config
 - [x] Install and configure Husky to enforce Conventional Commits
-- [] Convert the Angular based chasethedeveloper.com to be React based
-- [] 100% unit test coverage
-- [] 100% integration test coverage
+- [ ] Convert the Angular based chasethedeveloper.com to be React based
+- [ ] 100% unit test coverage
+- [ ] Move assets to a CDN
