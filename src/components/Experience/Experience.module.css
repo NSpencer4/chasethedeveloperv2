@@ -428,7 +428,7 @@
     }
 
     .timelineCardDates {
-        width: 60%;
+        width: 70%;
     }
 
     .timelineGlyphDiv {
@@ -437,10 +437,6 @@
 
     .timelineCardPosition {
         margin: 10px 0 12px;
-    }
-
-    .timelineCard-dates {
-        width: 60%;
     }
 
     .timelineGlyph:before {
