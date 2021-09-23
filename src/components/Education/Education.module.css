@@ -1,6 +1,6 @@
 .educationSection {
     padding: 75px 0;
-    background: #f7f7f7;
+    background: #efefef;
     text-align: center;
 }
 
@@ -27,6 +27,6 @@
 }
 
 .wsuPic {
-    max-width: 65%;
+    max-width: 40%;
     margin: 0 auto;
 }
