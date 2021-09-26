@@ -37,7 +37,7 @@ export const Contact = (): JSX.Element => {
                     <input type="text" name="name" id="name" placeholder="Your name"
                            value={nameVal}
                            onChange={(e) => setNameVal(e.target.value)}
-                           className="form-control input-lg" required/>
+                           className="form-control input-lg"/>
                     <p className="help-block text-danger"></p>
                   </div>
                 </div>
@@ -47,8 +47,7 @@ export const Contact = (): JSX.Element => {
                     <input type="email" name="email" id="email"
                            value={emailVal}
                            onChange={(e) => setEmailVal(e.target.value)}
-                           placeholder="Your email address" className="form-control input-lg"
-                           required/>
+                           placeholder="Your email address" className="form-control input-lg"/>
                     <p className="help-block text-danger"></p>
                   </div>
                 </div>
@@ -58,7 +57,7 @@ export const Contact = (): JSX.Element => {
                   <textarea name="message" id="message"
                             value={messageVal}
                             onChange={(e) => setMessageVal(e.target.value)}
-                            className="form-control input-lg" required></textarea>
+                            className="form-control input-lg"></textarea>
                     <p className="help-block text-danger"></p>
                   </div>
                 </div>

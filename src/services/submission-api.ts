@@ -1,5 +1,3 @@
-const submissionEndpoint = process.env['CF-SUBMISSION-ENDPOINT'] || '';
-
 export const submitContact = (name: string, email: string, message: string, scraperCheck: string) => {
   // Robot check
   if (scraperCheck) {
@@ -8,7 +6,7 @@ export const submitContact = (name: string, email: string, message: string, scra
     });
   }
 
-  return fetch(submissionEndpoint, {
+  return fetch('https://us-central1-spencer-tech-project.cloudfunctions.net/resume-contact-form', {
     method: 'POST',
     mode: 'cors',
     headers: new Headers({ 'Content-type': 'application/json' }),
