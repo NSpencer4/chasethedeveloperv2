@@ -1,6 +1,7 @@
 import styles from './Contact.module.css';
 import { useState } from 'react';
 import { submitContact } from '../../services/submission-api';
+import cn from 'classnames';
 
 export const Contact = (): JSX.Element => {
   const [nameVal, setNameVal] = useState('');
@@ -62,7 +63,7 @@ export const Contact = (): JSX.Element => {
                   </div>
                 </div>
                 <input
-                  className="form-control"
+                  className={cn('form-control', styles.scraperCheck)}
                   type="text"
                   name="scraperCheck"
                   id="scraperCheck"
