@@ -1,5 +1,5 @@
 import styles from './Contact.module.css';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { submitContact } from '../../services/submission-api';
 import cn from 'classnames';
 
@@ -10,7 +10,8 @@ export const Contact = (): JSX.Element => {
   const [scraperVal, setScraperVal] = useState('');
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  const submitForm = () => {
+  const submitForm = (event: React.SyntheticEvent<HTMLFormElement>) => {
+    event.preventDefault();
     submitContact(nameVal, emailVal, messageVal, scraperVal)
       .then(() => {
         setFormSubmitted(true);
