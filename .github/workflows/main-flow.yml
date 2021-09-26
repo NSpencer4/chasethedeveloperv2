@@ -25,6 +25,7 @@ jobs:
       - name: Build
         run: |
           yarn install
+          lerna exec -- npm install
           yarn run audit:unused:deps
           yarn run audit:deps
           yarn run lint
