@@ -30,14 +30,14 @@ export const Contact = (): JSX.Element => {
           <div className="col-sm-8">
             {
               !formSubmitted &&
-              (<form className="form-horizontal" id="contactForm">
+              (<form className="form-horizontal" id="contactForm" onSubmit={submitForm}>
                 <div className="control-group">
                   <label className="control-label">Name</label>
                   <div className="controls">
                     <input type="text" name="name" id="name" placeholder="Your name"
                            value={nameVal}
                            onChange={(e) => setNameVal(e.target.value)}
-                           className="form-control input-lg"/>
+                           className="form-control input-lg" required/>
                     <p className="help-block text-danger"></p>
                   </div>
                 </div>
@@ -47,7 +47,7 @@ export const Contact = (): JSX.Element => {
                     <input type="email" name="email" id="email"
                            value={emailVal}
                            onChange={(e) => setEmailVal(e.target.value)}
-                           placeholder="Your email address" className="form-control input-lg"/>
+                           placeholder="Your email address" className="form-control input-lg" required/>
                     <p className="help-block text-danger"></p>
                   </div>
                 </div>
@@ -57,7 +57,7 @@ export const Contact = (): JSX.Element => {
                   <textarea name="message" id="message"
                             value={messageVal}
                             onChange={(e) => setMessageVal(e.target.value)}
-                            className="form-control input-lg"></textarea>
+                            className="form-control input-lg" required></textarea>
                     <p className="help-block text-danger"></p>
                   </div>
                 </div>
@@ -72,7 +72,7 @@ export const Contact = (): JSX.Element => {
                 />
                 <div className="form-actions">
                   <div id="success"></div>
-                  <button type="submit" className="btn btn-primary btn-lg btn-block" onClick={submitForm}>Submit
+                  <button type="submit" className="btn btn-primary btn-lg btn-block">Submit
                     Message
                   </button>
                 </div>
