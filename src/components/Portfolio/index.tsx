@@ -170,6 +170,24 @@ export const Portfolio = (): JSX.Element => {
               </a>
             </div>
           </div>
+
+          <div className="col-md-3 col-xs-6">
+            <div className={cn('card', styles.portfolioCards)}>
+              <a href="https://storybook.chasespencer.dev">
+                <img src="/storybook.png"
+                     className={styles.portfolioImg} alt="img"/>
+              </a>
+            </div>
+          </div>
+
+          <div className="col-md-3 col-xs-6">
+            <div className={cn('card', styles.portfolioCards)}>
+              <a href="https://storybook.smgro.dev">
+                <img src="/storybook-gro.png"
+                     className={styles.portfolioImg} alt="img"/>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
