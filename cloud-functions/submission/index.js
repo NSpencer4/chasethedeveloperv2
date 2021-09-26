@@ -25,11 +25,10 @@ const schema = Joi.object({
 });
 
 const sendMessage = async (reqObj) => {
-    console.log(reqObj);
-    const recordKey = datastore.key([new Date().toISOString(), reqObj.name]);
+    const recordKey = datastore.key(['Inquiry', reqObj.name]);
     const inquiry = {
         key: recordKey,
-        data: reqObj,
+        data: JSON.parse(reqObj),
     };
     await datastore.save(inquiry);
 }

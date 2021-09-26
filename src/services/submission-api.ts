@@ -9,7 +9,7 @@ export const submitContact = (name: string, email: string, message: string, scra
   return fetch('https://us-central1-spencer-tech-project.cloudfunctions.net/resume-contact-form', {
     method: 'POST',
     mode: 'cors',
-    headers: new Headers({ 'Content-type': 'application/json' }),
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       name,
       email,
