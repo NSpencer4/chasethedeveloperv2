@@ -48,3 +48,5 @@ package-lock.json
 *.tfstate.*
 terraform.tfvars
 *.auto.tfvars
+
+.open-next
