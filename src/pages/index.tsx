@@ -1,41 +1,41 @@
-import React from 'react';
-import type { NextPage } from 'next';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import { Intro } from '../components/Intro';
-import { Profile } from '../components/Profile';
-import { Skills } from '../components/Skills';
+import { Header } from '../components/Header';
+import { Hero } from '../components/Hero';
+import { TechStack } from '../components/TechStack';
 import { Education } from '../components/Education';
-import 'bootstrap/dist/css/bootstrap.css';
 import { Experience } from '../components/Experience';
 import { Portfolio } from '../components/Portfolio';
 import { Contact } from '../components/Contact';
 
-const Home: NextPage = () => {
+export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Chase Spencer</title>
-        <meta name="description" content="Chase Spencer's Interactive Resume" />
+        <title>Chase Spencer | Software Developer</title>
+        <meta name="description" content="Chase Spencer - Full-stack developer with 6+ years experience" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-              integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
-              crossOrigin="anonymous" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+        />
       </Head>
 
+      <Header />
+
       <main className={styles.main}>
-        <Intro />
-        <Profile />
-        <Skills />
-        <Education />
+        <Hero />
+        <TechStack />
         <Experience />
+        <Education />
         <Portfolio />
         <Contact />
       </main>
 
-      <footer className={styles.footer}></footer>
+      <footer className={styles.footer}>
+        <p className={styles.footerLine}>-- END OF PAGE --</p>
+        <p className={styles.footerVersion}>v2.0.0-terminal</p>
+      </footer>
     </div>
   );
-};
-
-export default Home;
+}

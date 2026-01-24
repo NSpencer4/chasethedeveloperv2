@@ -26,14 +26,25 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-.env.local
+.env
 .env.development.local
 .env.test.local
 .env.production.local
 package-lock.json
+
+# cloudflare
+.wrangler
 
 # vercel
 .vercel
 
 # IDE
 .idea
+.env
+
+# infra
+.terraform
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+*.auto.tfvars

@@ -27,9 +27,14 @@
     "noFallthroughCasesInSwitch": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
-    "declaration": true
+    "declaration": true,
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "typeRoots": [
     "node_modules/@types",
@@ -37,17 +42,19 @@
     "src/global.d.ts"
   ],
   "rootDirs": [
-    "src",
-    "stories"
+    "src"
   ],
   "include": [
     "next-env.d.ts",
     "src/**/*.ts",
-    "src/**/*.tsx"
+    "src/**/*.tsx",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "dist",
     "out",
+    ".vercel",
+    ".next",
     "node_modules"
   ]
 }

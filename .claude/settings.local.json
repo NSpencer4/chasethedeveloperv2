@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir \"C:\\\\Users\\\\Chase\\\\WebstormProjects\\\\chasethedeveloperv2\")",
+      "Bash(npm run build:*)",
+      "Bash(yarn install)",
+      "Bash(yarn upgrade:*)",
+      "Bash(npm view:*)",
+      "Bash(yarn build)",
+      "Bash(yarn build:worker:*)",
+      "Bash(yarn add:*)",
+      "Bash(ls:*)",
+      "Bash(terraform:*)",
+      "Bash(aws s3api create-bucket:*)"
+    ]
+  }
+}
