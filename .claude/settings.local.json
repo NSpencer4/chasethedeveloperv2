@@ -8,7 +8,8 @@
       "Bash(npm view:*)",
       "Bash(yarn build)",
       "Bash(yarn build:worker:*)",
-      "Bash(yarn add:*)"
+      "Bash(yarn add:*)",
+      "Bash(ls:*)"
     ]
   }
 }

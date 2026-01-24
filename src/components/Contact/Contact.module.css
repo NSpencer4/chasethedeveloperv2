@@ -112,6 +112,16 @@
   display: none;
 }
 
+.errorMessage {
+  color: #ff6b6b;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  margin: 0;
+  padding: 0.5rem;
+  background-color: rgba(255, 107, 107, 0.1);
+  border-radius: 0.25rem;
+}
+
 .submitButton {
   display: flex;
   align-items: center;
@@ -139,6 +149,12 @@
 
 .submitButton:active {
   transform: scale(0.98);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
 }
 
 .successCard {

@@ -2,19 +2,28 @@ import styles from './Contact.module.css';
 import React, { useState } from 'react';
 import { submitContact } from '../../services/submission-api';
 
-export const Contact = (): JSX.Element => {
+export const Contact = () => {
   const [nameVal, setNameVal] = useState('');
   const [emailVal, setEmailVal] = useState('');
   const [messageVal, setMessageVal] = useState('');
   const [scraperVal, setScraperVal] = useState('');
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const submitForm = (event: React.SyntheticEvent<HTMLFormElement>) => {
+  const submitForm = async (event: React.SyntheticEvent<HTMLFormElement>) => {
     event.preventDefault();
-    submitContact(nameVal, emailVal, messageVal, scraperVal)
-      .then(() => {
-        setFormSubmitted(true);
-      });
+    setIsSubmitting(true);
+    setError(null);
+
+    try {
+      const response = await submitContact(nameVal, emailVal, messageVal, scraperVal);
+      response.success ? setFormSubmitted(true) : setError(response.message || 'Failed to send message');
+    } catch {
+      setError('An error occurred. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -91,9 +100,10 @@ export const Contact = (): JSX.Element => {
             onChange={(e) => setScraperVal(e.target.value)}
             autoComplete="off"
           />
-          <button type="submit" className={styles.submitButton}>
+          {error && <p className={styles.errorMessage}>{error}</p>}
+          <button type="submit" className={styles.submitButton} disabled={isSubmitting}>
             <span className="material-symbols-outlined">mail</span>
-            <span>SEND_MESSAGE</span>
+            <span>{isSubmitting ? 'SENDING...' : 'SEND_MESSAGE'}</span>
           </button>
         </form>
       ) : (

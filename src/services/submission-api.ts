@@ -1,26 +1,24 @@
-export const submitContact = (name: string, email: string, message: string, scraperCheck: string) => {
-  // Robot check
-  if (scraperCheck) {
-    return new Promise((resolve, reject) => {
-      reject('An error occurred.');
-    });
-  }
+type ContactResponse = {
+  success: boolean;
+  message: string;
+};
 
-  return fetch('https://us-central1-spencer-tech-project.cloudfunctions.net/resume-contact-form', {
+export const submitContact = async (
+  name: string,
+  email: string,
+  message: string,
+  scraperCheck: string
+): Promise<ContactResponse> => {
+  const response = await fetch('/api/contact', {
     method: 'POST',
-    mode: 'cors',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       name,
       email,
       message,
-      scraperCheck
-    })
-  })
-    .then(response => {
-      return response.json();
-    })
-    .catch(error => {
-      return error;
-    });
+      scraperCheck,
+    }),
+  });
+
+  return response.json();
 };
