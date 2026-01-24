@@ -60,7 +60,6 @@ async function handleFetchEvent(event) {
       return new Response(page.body, page)
 
     } catch (e) {
-      // if an error is thrown try to serve the asset at 404.html
       if (!DEBUG) {
         try {
           let notFoundResponse = await getAssetFromKV(event, {

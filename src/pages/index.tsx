@@ -1,5 +1,3 @@
-import React from 'react';
-import type { NextPage } from 'next';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { Header } from '../components/Header';
@@ -10,7 +8,7 @@ import { Experience } from '../components/Experience';
 import { Portfolio } from '../components/Portfolio';
 import { Contact } from '../components/Contact';
 
-const Home: NextPage = () => {
+export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
@@ -41,5 +39,3 @@ const Home: NextPage = () => {
     </div>
   );
 };
-
-export default Home;

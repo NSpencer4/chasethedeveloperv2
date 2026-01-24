@@ -27,8 +27,7 @@
     "noFallthroughCasesInSwitch": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true,
+        "noUnusedLocals": true,
     "declaration": true,
     "incremental": true
   },
@@ -49,6 +48,8 @@
   "exclude": [
     "dist",
     "out",
+    ".vercel",
+    ".next",
     "node_modules"
   ]
 }
