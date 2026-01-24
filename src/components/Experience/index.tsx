@@ -28,8 +28,15 @@ const jobs: Job[] = [
     ],
     tech: [
       { name: 'TypeScript', color: 'primary' },
+      { name: 'Express', color: 'green' },
+      { name: 'Next.js', color: 'primary' },
+      { name: 'React', color: 'cyan' },
       { name: 'AWS', color: 'orange' },
       { name: 'Kafka', color: 'purple' },
+      { name: 'DynamoDB', color: 'orange' },
+      { name: 'CircleCI', color: 'green' },
+      { name: 'Terraform', color: 'purple' },
+      { name: 'Databricks', color: 'orange' },
     ],
   },
   {
@@ -62,8 +69,12 @@ const jobs: Job[] = [
     ],
     tech: [
       { name: 'React', color: 'cyan' },
+      { name: 'Storybook', color: 'orange' },
       { name: 'GCP', color: 'primary' },
-      { name: 'GraphQL', color: 'orange' },
+      { name: 'BigQuery', color: 'primary' },
+      { name: 'GraphQL', color: 'purple' },
+      { name: 'Contentful', color: 'cyan' },
+      { name: 'GitLab CI', color: 'orange' },
     ],
   },
   {
@@ -82,6 +93,8 @@ const jobs: Job[] = [
       { name: 'Angular', color: 'orange' },
       { name: 'Spring Boot', color: 'green' },
       { name: 'AEM', color: 'purple' },
+      { name: 'Adobe Analytics', color: 'orange' },
+      { name: 'Micro-frontends', color: 'cyan' },
     ],
   },
   {
@@ -98,6 +111,8 @@ const jobs: Job[] = [
       { name: 'Drupal', color: 'primary' },
       { name: 'Magento', color: 'orange' },
       { name: 'New Relic', color: 'green' },
+      { name: 'Sumo Logic', color: 'purple' },
+      { name: 'Travis CI', color: 'green' },
     ],
   },
   {
@@ -111,8 +126,10 @@ const jobs: Job[] = [
     ],
     tech: [
       { name: 'AngularJS', color: 'orange' },
+      { name: 'Angular', color: 'orange' },
       { name: 'Python', color: 'cyan' },
       { name: 'GAE', color: 'primary' },
+      { name: 'Drupal', color: 'primary' },
     ],
   },
 ];
