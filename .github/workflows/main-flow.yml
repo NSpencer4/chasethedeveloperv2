@@ -71,4 +71,3 @@ jobs:
           TF_VAR_aws_region: us-east-1
           TF_VAR_ses_from_email: ${{ vars.SES_FROM_EMAIL }}
           TF_VAR_contact_email: ${{ vars.CONTACT_EMAIL }}
-          TF_VAR_custom_domain: ${{ vars.CUSTOM_DOMAIN }}

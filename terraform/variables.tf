@@ -55,4 +55,3 @@ variable "ses_from_email" {
   type        = string
   default     = "chase@thespencers.email"
 }
-
