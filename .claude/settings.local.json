@@ -9,7 +9,8 @@
       "Bash(yarn build)",
       "Bash(yarn build:worker:*)",
       "Bash(yarn add:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(terraform:*)"
     ]
   }
 }

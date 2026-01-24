@@ -41,3 +41,10 @@ package-lock.json
 # IDE
 .idea
 .env
+
+# infra
+.terraform
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+*.auto.tfvars

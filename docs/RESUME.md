@@ -3,7 +3,7 @@
 Senior Software Engineer
 Columbus, Ohio Metropolitan Area
 
-* **Email:** [n.chase.spencer@gmail.com](mailto:chase@spencer.fam)
+* **Email:** [n.chase.spencer@gmail.com](mailto:chase@thespencers.email)
 * **LinkedIn:** [https://www.linkedin.com/in/chase-spencer4](https://www.linkedin.com/in/chase-spencer4)
 * **Website:** [https://chasespencer.dev](https://chasespencer.dev)
 

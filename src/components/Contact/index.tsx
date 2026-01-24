@@ -38,7 +38,7 @@ export const Contact = () => {
         <div className={styles.terminalOutput}>
           <div className={styles.jsonLine}>
             <span className={styles.jsonKey}>"email":</span>
-            <span className={styles.jsonValue}>"chase@spencer.fam"</span>
+            <span className={styles.jsonValue}>"chase@thespencers.email"</span>
           </div>
           <div className={styles.jsonLine}>
             <span className={styles.jsonKey}>"github":</span>
