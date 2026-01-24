@@ -13,7 +13,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Chase Spencer | Software Developer</title>
-        <meta name="description" content="Chase Spencer - Full-stack developer with 6+ years experience" />
+        <meta name="description" content="Chase Spencer - Senior Software Engineer with 9+ years experience in distributed systems and eCommerce platforms" />
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="stylesheet"
