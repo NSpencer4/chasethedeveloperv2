@@ -11,6 +11,12 @@ terraform {
       version = "~> 5.0"
     }
   }
+
+  backend "s3" {
+    bucket = "chasethedeveloper-terraform-state"
+    key    = "portfolio/terraform.tfstate"
+    region = "us-east-1"
+  }
 }
 
 provider "cloudflare" {
