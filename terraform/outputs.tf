@@ -21,7 +21,6 @@ output "pages_url" {
 output "ses_sender_email" {
   description = "The verified SES sender email"
   value       = aws_ses_email_identity.sender.email
-  default     = "noreply@chasespencer.dev"
 }
 
 output "ses_verification_status" {
