@@ -49,7 +49,7 @@ const experience: Job[] = [
       'Led a team of engineers to design and implement integrations expanding order system capabilities.',
       'Designed Express.js microservices following CQRS patterns to improve scalability and performance.',
       'Orchestrated migration of microservices into an Nx monorepo, increasing code reuse and developer collaboration.',
-      'Developed internal testing tools with Next.js and React to simulate complex ordering scenarios.',
+      'Developed internal testing tools with Next.js and React to simulate complex ordering scenarios and saga patterns.',
       'Established CI/CD pipelines with CircleCI and Terraform, ensuring reliable delivery.',
       'Implemented Databricks dashboards and Monte Carlo alerts, reducing customer support volume by quickly detecting data anomalies.',
     ],
@@ -98,18 +98,16 @@ const experience: Job[] = [
       'Contributed to scalable Magento 2 architecture and secure payment integrations (Vantiv).',
     ],
   },
-  {
-    company: 'The Scotts Miracle-Gro Company',
-    title: 'eBusiness Intern',
-    period: 'May 2015 – September 2017',
-    bullets: [
-      'Built internal web applications and REST APIs (Google App Engine/Python).',
-      'Implemented features using AngularJS/Angular 4 and supported Drupal 8 websites.',
-    ],
-  },
 ];
 
 const additionalExperience: AdditionalRole[] = [
+  {
+    company: 'The Scotts Miracle-Gro Company',
+    title: 'eBusiness Intern',
+    period: '2015–2017',
+    description:
+        'Built internal web apps (Angular) and REST APIs on Google App Engine (Python), and supported Drupal 8 sites.',
+  },
   {
     company: 'OmniSpear Web & Network Solutions',
     title: 'Web Development Intern',
@@ -167,6 +165,11 @@ export default function Resume() {
       <article className={styles.resume}>
         {/* Header */}
         <header className={styles.header}>
+          <img
+            src="/profile.jpg"
+            alt={contactInfo.name}
+            className={styles.profilePhoto}
+          />
           <h1 className={styles.name}>{contactInfo.name}</h1>
           <p className={styles.title}>{contactInfo.title}</p>
           <p className={styles.location}>{contactInfo.location}</p>

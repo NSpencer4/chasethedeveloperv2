@@ -22,7 +22,7 @@ const jobs: Job[] = [
       'Led a team of engineers to design and implement integrations expanding order system capabilities.',
       'Designed Express.js microservices following CQRS patterns to improve scalability and performance.',
       'Orchestrated migration of microservices into an Nx monorepo, increasing code reuse and developer collaboration.',
-      'Developed internal testing tools with Next.js and React to simulate complex ordering scenarios.',
+      'Developed internal testing tools with Next.js and React to simulate complex ordering scenarios and saga patterns.',
       'Established CI/CD pipelines with CircleCI and Terraform, ensuring reliable delivery.',
       'Implemented Databricks dashboards and Monte Carlo alerts, reducing customer support volume by quickly detecting data anomalies.',
     ],

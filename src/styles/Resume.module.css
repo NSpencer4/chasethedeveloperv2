@@ -69,6 +69,15 @@
   border-bottom: 2px solid #2b8cee;
 }
 
+.profilePhoto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.75rem;
+  border: 3px solid #2b8cee;
+}
+
 .name {
   font-size: 24pt;
   font-weight: 700;

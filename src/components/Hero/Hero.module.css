@@ -100,6 +100,32 @@
   margin: 0;
 }
 
+.resumeLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  padding: 0.625rem 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  color: var(--terminal-green);
+  background-color: rgba(74, 246, 38, 0.1);
+  border: 1px solid rgba(74, 246, 38, 0.3);
+  border-radius: 0.25rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.resumeLink:hover {
+  background-color: rgba(74, 246, 38, 0.15);
+  border-color: rgba(74, 246, 38, 0.5);
+  text-decoration: none;
+}
+
+.resumeIcon {
+  font-size: 1rem;
+}
+
 .statusInfo {
   margin-top: 2rem;
   display: flex;

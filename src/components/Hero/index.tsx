@@ -1,4 +1,5 @@
 import cn from 'classnames';
+import Link from 'next/link';
 import styles from './Hero.module.css';
 
 export const Hero = (): JSX.Element => {
@@ -34,6 +35,11 @@ export const Hero = (): JSX.Element => {
                         with a client-first mindset and a history of leading teams to successful delivery. Seeking
                         opportunities to address diverse business problems using modern engineering practices.
                     </p>
+
+                    <Link href="/resume" className={styles.resumeLink}>
+                        <span className={styles.resumeIcon}>&#x2B73;</span>
+                        <span>View Resume</span>
+                    </Link>
                 </div>
             </div>
 
