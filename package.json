@@ -12,7 +12,6 @@
     "lint": "eslint src --fix",
     "test": "jest",
     "preview": "npm run build:worker && wrangler pages dev",
-    "deploy": "npm run build:worker && wrangler pages deploy .vercel/output/static",
     "prepare": "npx husky install",
     "pipeline.readiness.check": "yarn run audit:unused:deps && yarn run audit:deps && yarn run lint && yarn run build && yarn run test"
   },
