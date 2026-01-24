@@ -31,12 +31,6 @@ variable "contact_email" {
   default     = "chase@thespencers.email"
 }
 
-variable "custom_domain" {
-  description = "Custom domain for the Pages project (optional)"
-  type        = string
-  default     = ""
-}
-
 # AWS Configuration
 variable "aws_region" {
   description = "AWS region for SES"
@@ -61,3 +55,4 @@ variable "ses_from_email" {
   type        = string
   default     = "noreply@chasespencer.dev"
 }
+

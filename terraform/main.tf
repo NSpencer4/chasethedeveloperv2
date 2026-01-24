@@ -90,13 +90,6 @@ resource "cloudflare_pages_project" "portfolio" {
   }
 }
 
-resource "cloudflare_pages_domain" "custom_domain" {
-  count        = var.custom_domain != "" ? 1 : 0
-  account_id   = var.cloudflare_account_id
-  project_name = cloudflare_pages_project.portfolio.name
-  domain       = var.custom_domain
-}
-
 # =============================================================================
 # AWS SES Configuration
 # =============================================================================
