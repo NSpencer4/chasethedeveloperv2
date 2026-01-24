@@ -155,7 +155,7 @@ export default function Resume() {
 
       <div className={styles.printControls}>
         <button onClick={handlePrint} className={styles.downloadBtn}>
-          <span className={styles.icon}>&#x2B73;</span> Download PDF
+          Download PDF
         </button>
         <Link href="/" className={styles.backLink}>
           &larr; Back to site
