@@ -6,7 +6,7 @@ interface Job {
   position: string;
   period: string;
   isCurrent: boolean;
-  description: string;
+  bullets: string[];
   tech: { name: string; color: string }[];
 }
 
@@ -16,7 +16,16 @@ const jobs: Job[] = [
     position: 'Senior Software Engineer',
     period: 'Nov 2021 - Present',
     isCurrent: true,
-    description: 'Supporting marketplace services enabling 100,000+ daily bid/ask placements and order systems processing 30,000+ daily orders. Building TypeScript AWS Lambdas, Kafka, and DynamoDB solutions. Led migration to Nx monorepo and established CI pipelines using CircleCI and Terraform.',
+    bullets: [
+      'Maintained and enhanced marketplace services processing 100k+ daily bid/ask placements, improving throughput and reliability.',
+      'Supported order and state machine services handling 30k+ daily orders, reducing processing errors.',
+      'Led a team of engineers to design and implement integrations expanding order system capabilities.',
+      'Designed Express.js microservices following CQRS patterns to improve scalability and performance.',
+      'Orchestrated migration of microservices into an Nx monorepo, increasing code reuse and developer collaboration.',
+      'Developed internal testing tools with Next.js and React to simulate complex ordering scenarios.',
+      'Established CI/CD pipelines with CircleCI and Terraform, ensuring reliable delivery.',
+      'Implemented Databricks dashboards and Monte Carlo alerts, reducing customer support volume by quickly detecting data anomalies.',
+    ],
     tech: [
       { name: 'TypeScript', color: 'primary' },
       { name: 'AWS', color: 'orange' },
@@ -25,10 +34,14 @@ const jobs: Job[] = [
   },
   {
     company: 'The Scotts Miracle-Gro Company',
-    position: 'Senior Software Engineer',
+    position: 'Senior Software Engineer, eBusiness',
     period: 'June 2021 - Oct 2021',
     isCurrent: false,
-    description: 'Implemented eCommerce microservices using NestJS. Established an enterprise SDK monorepo using Lerna for shared modules. Contributed to microservice initiatives supporting the MyLawn App.',
+    bullets: [
+      'Developed NestJS microservices, delivering scalable backend systems.',
+      'Established an enterprise SDK monorepo using Lerna to manage shared modules across services.',
+      'Supported MyLawn App microservices, improving performance and maintainability.',
+    ],
     tech: [
       { name: 'NestJS', color: 'cyan' },
       { name: 'TypeScript', color: 'primary' },
@@ -40,19 +53,31 @@ const jobs: Job[] = [
     position: 'Tech Lead, Frontend Applications',
     period: 'Nov 2020 - June 2021',
     isCurrent: false,
-    description: 'Engineered event-based architecture for Super Bowl LV sweepstakes processing 400,000+ submissions using GCP Cloud Functions and Pub/Sub. Led frontend team building enterprise component SDK using React and Storybook.',
+    bullets: [
+      'Led frontend team in building a component-based React/Storybook SDK.',
+      'Engineered an event-driven architecture for Super Bowl LV sweepstakes, processing 400k+ submissions using GCP Cloud Functions, Pub/Sub, and BigQuery.',
+      'Developed enterprise websites using React and headless APIs aligned with organizational standards.',
+      'Integrated Contentful + GraphQL, streamlining content workflows.',
+      'Enhanced GitLab CI/CD pipelines, improving build reliability.',
+    ],
     tech: [
       { name: 'React', color: 'cyan' },
       { name: 'GCP', color: 'primary' },
-      { name: 'Storybook', color: 'orange' },
+      { name: 'GraphQL', color: 'orange' },
     ],
   },
   {
     company: 'Cardinal Health',
-    position: 'Software Engineer',
+    position: 'Software Engineer, eCommerce Product & Experience – Medical',
     period: 'Sept 2018 - Nov 2020',
     isCurrent: false,
-    description: 'Supported market.cardinalhealth.com, a B2B medical eCommerce SPA generating $1B+ in annual revenue. Improved application performance by 80% and led Angular upgrade from v2 to v7. Designed micro-frontend architecture using Web Components.',
+    bullets: [
+      'Supported market.cardinalhealth.com, a B2B SPA generating $1B+ in annual revenue.',
+      'Delivered full-stack development using Angular, Spring Boot, and AEM headless CMS.',
+      'Led upgrade of Market application from Angular 2 → Angular 7, improving performance by 80%.',
+      'Designed micro-frontend architecture supporting parallel team development.',
+      'Integrated Paymetric for secure credit card processing and led analytics initiatives using Adobe Analytics/Target.',
+    ],
     tech: [
       { name: 'Angular', color: 'orange' },
       { name: 'Spring Boot', color: 'green' },
@@ -61,10 +86,14 @@ const jobs: Job[] = [
   },
   {
     company: 'The Scotts Miracle-Gro Company',
-    position: 'Software Engineer',
+    position: 'Software Engineer, eCommerce Development',
     period: 'Oct 2017 - Sept 2018',
     isCurrent: false,
-    description: 'Supported 13 Drupal 8 branded sites (Scotts.com, MiracleGro.com, Roundup.com, Ortho.com) and 10 Magento-based DTC stores driving multi-million-dollar annual sales. Established Travis CI pipelines and implemented monitoring with New Relic.',
+    bullets: [
+      'Supported 13 Drupal 8 branded sites and 10 Magento DTC stores, driving multi-million-dollar sales.',
+      'Implemented monitoring/alerting using New Relic and Sumo Logic and CI pipelines with Travis CI.',
+      'Contributed to scalable Magento 2 architecture and secure payment integrations (Vantiv).',
+    ],
     tech: [
       { name: 'Drupal', color: 'primary' },
       { name: 'Magento', color: 'orange' },
@@ -76,7 +105,10 @@ const jobs: Job[] = [
     position: 'eBusiness Intern',
     period: 'May 2015 - Sept 2017',
     isCurrent: false,
-    description: 'Built internal web applications to improve business workflows. Developed REST APIs on Google App Engine (Python) and implemented features using AngularJS and Angular 4.',
+    bullets: [
+      'Built internal web applications and REST APIs (Google App Engine/Python).',
+      'Implemented features using AngularJS/Angular 4 and supported Drupal 8 websites.',
+    ],
     tech: [
       { name: 'AngularJS', color: 'orange' },
       { name: 'Python', color: 'cyan' },
@@ -101,7 +133,11 @@ export const Experience = (): JSX.Element => {
             <div className={styles.card}>
               <h4 className={styles.company}>{job.company}</h4>
               <p className={styles.position}>{job.position}</p>
-              <p className={styles.description}>{job.description}</p>
+              <ul className={styles.bullets}>
+                {job.bullets.map((bullet, bIdx) => (
+                  <li key={bIdx}>{bullet}</li>
+                ))}
+              </ul>
               <div className={styles.techTags}>
                 {job.tech.map((t) => (
                   <span key={t.name} className={cn(styles.techTag, styles[t.color])}>
