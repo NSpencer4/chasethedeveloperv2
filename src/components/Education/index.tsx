@@ -2,30 +2,29 @@ import styles from './Education.module.css';
 
 export const Education = (): JSX.Element => {
   return (
-    <div data-testid="education-section" className={styles.educationSection}>
-      <div className="container">
-        <header data-testid="header-section" className={styles.headerSection}>
-          <h2 data-testid="title-section" className={styles.titleSection}>Education</h2>
-          <div data-testid="spacing-bar" className={styles.spacingBar}></div>
-        </header>
-        <br/>
-        <div className="row top-space">
-          <div className="col-md-12">
-            <div data-testid="wsuPic" className={styles.wsuPic}>
-              <img
-              src="/Wright_State_University_logo.png"
-              alt="wsu" />
-              </div>
+    <section data-testid="education-section" className={styles.section}>
+      <h3 className={styles.sectionHeader}>{'// 03. Education'}</h3>
+      <div className={styles.timelineWrapper}>
+        <div className={styles.timelineItem}>
+          <div className={styles.commitDot}></div>
+          <div className={styles.periodTag}>
+            <span className={styles.periodLabel}>graduated:</span>
+            <span className={styles.periodValue}>2018</span>
           </div>
-        </div>
-        <br/>
-        <div className="row top-space">
-          <div className="col-md-12">
-            <p>Bachelor of Computer Science</p>
-            <p><strong>Graduated:</strong> 2018</p>
+          <div className={styles.card}>
+            <div className={styles.logoWrapper}>
+              <img
+                src="/Wright_State_University_logo.png"
+                alt="Wright State University"
+                className={styles.logo}
+              />
+            </div>
+            <h4 className={styles.institution}>Wright State University</h4>
+            <p className={styles.degree}>Bachelor of Science, Computer Science</p>
+            <p className={styles.location}>Dayton, Ohio</p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

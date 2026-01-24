@@ -1,14 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  --primary: #2b8cee;
+  --background-dark: #0d1117;
+  --surface-dark: #161b22;
+  --terminal-green: #4af626;
+  --terminal-purple: #c678dd;
+  --terminal-orange: #d19a66;
+  --terminal-cyan: #56b6c2;
+  --terminal-grey: #5c6370;
+  --border-dark: #30363d;
+  --text-primary: #e6edf3;
+  --text-secondary: #8b949e;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   height: 100%;
+  background-color: var(--background-dark);
+  color: var(--text-primary);
 }
 
 a {
-  color: inherit;
+  color: var(--primary);
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 * {
@@ -17,4 +39,62 @@ a {
 
 img {
   max-width: 100%;
+}
+
+/* Typography Utilities */
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.font-display {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Terminal Effects */
+.scanlines {
+  position: relative;
+  overflow: hidden;
+}
+
+.scanlines::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+              linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 4px, 3px 100%;
+  pointer-events: none;
+}
+
+.pixelated {
+  image-rendering: pixelated;
+  filter: contrast(1.2) brightness(0.9) grayscale(0.3);
+}
+
+.cursor-blink {
+  display: inline-block;
+  width: 10px;
+  height: 1.2em;
+  background-color: var(--primary);
+  margin-left: 4px;
+  vertical-align: middle;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Container utility */
+.container {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }

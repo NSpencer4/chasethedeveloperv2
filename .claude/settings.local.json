@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir \"C:\\\\Users\\\\Chase\\\\WebstormProjects\\\\chasethedeveloperv2\")",
+      "Bash(npm run build:*)"
+    ]
+  }
+}

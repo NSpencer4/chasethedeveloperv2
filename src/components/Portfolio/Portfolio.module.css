@@ -1,61 +1,74 @@
-.portfolioSection {
-    padding: 75px 0;
-    background: #f7f7f7;
-    text-align: center;
+.section {
+  margin-top: 3rem;
 }
 
-.headerSection {
-    text-align: center;
-    margin-bottom: 10px;
+.sectionHeader {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--terminal-grey);
+  padding-bottom: 1rem;
+  margin: 0;
 }
 
-.titleSection {
-    font-size: 3em;
-    font-weight: 700;
-    letter-spacing: 5px;
-    text-align: center;
-    color: #555555;
-    text-transform: uppercase;
-    padding: 20px 0;
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
 
-.spacingBar {
-    background: #3ebdf0;
-    width: 100px;
-    height: 2px;
-    margin: auto;
-}
-.portfolioImg {
-    max-height: 150px;
-    max-width: 96%;
-}
-
-.rounded {
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--surface-dark);
+  border: 1px solid var(--border-dark);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition: all 0.2s;
+  text-decoration: none;
 }
 
-.smallerImgs {
-    margin-top: 20%;
+.projectCard:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  text-decoration: none;
 }
 
-.xsImgs {
-    margin-top: 40%;
+.projectImageWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  margin-bottom: 0.75rem;
 }
 
-.portfolioCards {
-    min-height: 222px;
+.projectImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
-.portfolioCards a {
-    margin: auto 0;
+.projectName {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-align: center;
 }
 
-.skillCards {
-    height: 194.81px;
+.projectCard:hover .projectName {
+  color: var(--primary);
 }
 
-.skillCards, .portfolioCards {
-    margin-bottom: 10px;
+@media (max-width: 600px) {
+  .projectGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .projectGrid {
+    grid-template-columns: 1fr;
+  }
 }

@@ -6,17 +6,19 @@
     "audit:deps": "yarn audit --audit-level=moderate --registry=https://registry.npmjs.org --production",
     "audit:unused:deps": "npx depcheck . --config=.depcheckrc.json",
     "dev": "next dev",
+    "wrangler.dev": "wrangler dev",
     "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
+    "deploy": "wrangler publish",
     "prepare": "npx husky install",
     "pipeline.readiness.check": "yarn run audit:unused:deps && yarn run audit:deps && yarn run lint && yarn run build && yarn run test"
   },
   "dependencies": {
-    "next": "11.1.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "next": "^12.1.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",
@@ -35,7 +37,7 @@
     "@typescript-eslint/parser": "^4.31.1",
     "bootstrap": "^5.1.1",
     "classnames": "^2.3.1",
-    "eslint": "7.32.0",
+    "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-typescript": "^14.0.0",
     "eslint-config-next": "11.1.2",

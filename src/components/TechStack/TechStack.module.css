@@ -1,0 +1,73 @@
+.section {
+  margin-top: 2rem;
+}
+
+.sectionHeader {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--terminal-grey);
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
+.card {
+  background-color: var(--surface-dark);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: 1px solid var(--border-dark);
+}
+
+.techGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.techPill {
+  display: flex;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0 0.75rem;
+  background-color: var(--background-dark);
+  border: 1px solid var(--border-dark);
+  border-radius: 0.25rem;
+  transition: border-color 0.2s;
+}
+
+.techPill:hover {
+  border-color: var(--primary);
+}
+
+.techIcon {
+  font-size: 18px;
+}
+
+.techName {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+}
+
+/* Icon colors */
+.cyan {
+  color: var(--terminal-cyan);
+}
+
+.green {
+  color: var(--terminal-green);
+}
+
+.orange {
+  color: var(--terminal-orange);
+}
+
+.purple {
+  color: var(--terminal-purple);
+}
+
+.primary {
+  color: var(--primary);
+}

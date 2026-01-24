@@ -1,7 +1,6 @@
 import styles from './Contact.module.css';
 import React, { useState } from 'react';
 import { submitContact } from '../../services/submission-api';
-import cn from 'classnames';
 
 export const Contact = (): JSX.Element => {
   const [nameVal, setNameVal] = useState('');
@@ -19,76 +18,91 @@ export const Contact = (): JSX.Element => {
   };
 
   return (
-    <div data-testid="contact-section" className={styles.contactSection}>
-      <div className="container">
-        <header data-testid="header-section" className={styles.headerSection}>
-          <h2 data-testid="title-section" className={styles.titleSection}>Contact</h2>
-          <div data-testid="spacing-bar" className={styles.spacingBar}></div>
-        </header>
-        <br/>
-        <div className="row top-space">
-          <div className="col-sm-2"></div>
-          <div className="col-sm-8">
-            {
-              !formSubmitted &&
-              (<form className="form-horizontal" id="contactForm" onSubmit={submitForm}>
-                <div className="control-group">
-                  <label className="control-label">Name</label>
-                  <div className="controls">
-                    <input type="text" name="name" id="name" placeholder="Your name"
-                           value={nameVal}
-                           onChange={(e) => setNameVal(e.target.value)}
-                           className="form-control input-lg" required/>
-                    <p className="help-block text-danger"></p>
-                  </div>
-                </div>
-                <div className="control-group">
-                  <label className="control-label">Email Address</label>
-                  <div className="controls">
-                    <input type="email" name="email" id="email"
-                           value={emailVal}
-                           onChange={(e) => setEmailVal(e.target.value)}
-                           placeholder="Your email address" className="form-control input-lg" required/>
-                    <p className="help-block text-danger"></p>
-                  </div>
-                </div>
-                <div className="control-group">
-                  <label className="control-label">Message</label>
-                  <div className="controls">
-                  <textarea name="message" id="message"
-                            value={messageVal}
-                            onChange={(e) => setMessageVal(e.target.value)}
-                            className="form-control input-lg" required></textarea>
-                    <p className="help-block text-danger"></p>
-                  </div>
-                </div>
-                <input
-                  className={cn('form-control', styles.scraperCheck)}
-                  type="text"
-                  name="scraperCheck"
-                  id="scraperCheck"
-                  value={scraperVal}
-                  onChange={(e) => setScraperVal(e.target.value)}
-                  autoComplete="off"
-                />
-                <div className="form-actions">
-                  <div id="success"></div>
-                  <button type="submit" className="btn btn-primary btn-lg btn-block">Submit
-                    Message
-                  </button>
-                </div>
-              </form>)
-            }
-            {
-              formSubmitted &&
-              (<div className="card">
-                <h3>Thank you for reaching out!</h3>
-              </div>)
-            }
-            <div className="col-sm-2"></div>
+    <section data-testid="contact-section" className={styles.section}>
+      <h3 className={styles.sectionHeader}>{'// 05. Connect'}</h3>
+
+      <div className={styles.terminalBox}>
+        <div className={styles.terminalPrompt}>
+          <span className={styles.promptSymbol}>$</span>
+          <span className={styles.promptCommand}>curl -X GET portfolio.api/contact</span>
+        </div>
+        <div className={styles.terminalOutput}>
+          <div className={styles.jsonLine}>
+            <span className={styles.jsonKey}>"email":</span>
+            <span className={styles.jsonValue}>"chase@spencer.fam"</span>
+          </div>
+          <div className={styles.jsonLine}>
+            <span className={styles.jsonKey}>"github":</span>
+            <span className={styles.jsonValue}>"github.com/NSpencer4"</span>
+          </div>
+          <div className={styles.jsonLine}>
+            <span className={styles.jsonKey}>"linkedin":</span>
+            <span className={styles.jsonValue}>"linkedin.com/in/chase-spencer4"</span>
           </div>
         </div>
       </div>
-    </div>
+
+      {!formSubmitted ? (
+        <form className={styles.form} onSubmit={submitForm}>
+          <div className={styles.formGroup}>
+            <label className={styles.label}>Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Your name"
+              value={nameVal}
+              onChange={(e) => setNameVal(e.target.value)}
+              className={styles.input}
+              required
+            />
+          </div>
+          <div className={styles.formGroup}>
+            <label className={styles.label}>Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your email address"
+              value={emailVal}
+              onChange={(e) => setEmailVal(e.target.value)}
+              className={styles.input}
+              required
+            />
+          </div>
+          <div className={styles.formGroup}>
+            <label className={styles.label}>Message</label>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Your message"
+              value={messageVal}
+              onChange={(e) => setMessageVal(e.target.value)}
+              className={styles.textarea}
+              required
+            ></textarea>
+          </div>
+          <input
+            className={styles.scraperCheck}
+            type="text"
+            name="scraperCheck"
+            id="scraperCheck"
+            value={scraperVal}
+            onChange={(e) => setScraperVal(e.target.value)}
+            autoComplete="off"
+          />
+          <button type="submit" className={styles.submitButton}>
+            <span className="material-symbols-outlined">mail</span>
+            <span>SEND_MESSAGE</span>
+          </button>
+        </form>
+      ) : (
+        <div className={styles.successCard}>
+          <span className={styles.successIcon}>✓</span>
+          <h3 className={styles.successTitle}>Message sent!</h3>
+          <p className={styles.successText}>Thank you for reaching out. I'll get back to you soon.</p>
+        </div>
+      )}
+    </section>
   );
 };

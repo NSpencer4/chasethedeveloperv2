@@ -29,7 +29,8 @@
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
-    "declaration": true
+    "declaration": true,
+    "incremental": true
   },
   "typeRoots": [
     "node_modules/@types",
