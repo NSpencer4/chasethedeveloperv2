@@ -18,7 +18,11 @@ export const Contact = () => {
 
     try {
       const response = await submitContact(nameVal, emailVal, messageVal, scraperVal);
-      response.success ? setFormSubmitted(true) : setError(response.message || 'Failed to send message');
+      if (response.success) {
+        setFormSubmitted(true);
+      } else {
+        setError(response.message || 'Failed to send message');
+      }
     } catch {
       setError('An error occurred. Please try again.');
     } finally {

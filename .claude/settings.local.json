@@ -10,7 +10,8 @@
       "Bash(yarn build:worker:*)",
       "Bash(yarn add:*)",
       "Bash(ls:*)",
-      "Bash(terraform:*)"
+      "Bash(terraform:*)",
+      "Bash(aws s3api create-bucket:*)"
     ]
   }
 }
