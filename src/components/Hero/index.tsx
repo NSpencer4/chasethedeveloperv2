@@ -6,20 +6,20 @@ export const Hero = (): JSX.Element => {
   return (
         <section data-testid="hero-section" className={styles.heroSection}>
             <div className={styles.heroContent}>
-                <div className={cn(styles.profileImage, 'scanlines')}>
-                    <img
-                        src="/profile.jpg"
-                        alt="Chase Spencer"
-                        className={cn(styles.profileImg, 'pixelated')}
-                    />
-                    <div className={styles.imageOverlay}></div>
-                    <div className={styles.imageAccent}></div>
-                </div>
-
                 <div className={styles.introContent}>
                     <div className={styles.whoamiPrompt}>
                         <span className={styles.promptArrow}>➜</span>
                         <span className={styles.promptText}>$ whoami</span>
+                    </div>
+
+                    <div className={cn(styles.profileImage, 'scanlines')}>
+                        <img
+                            src="/profile.jpg"
+                            alt="Chase Spencer"
+                            className={cn(styles.profileImg, 'pixelated')}
+                        />
+                        <div className={styles.imageOverlay}></div>
+                        <div className={styles.imageAccent}></div>
                     </div>
 
                     <h1 className={styles.name}>Chase Spencer</h1>
