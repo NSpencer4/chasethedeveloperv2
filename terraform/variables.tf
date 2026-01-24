@@ -53,6 +53,6 @@ variable "aws_secret_key" {
 variable "ses_from_email" {
   description = "Verified email address to send from via SES"
   type        = string
-  default     = "noreply@chasespencer.dev"
+  default     = "chase@thespencers.email"
 }
 

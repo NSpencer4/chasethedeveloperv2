@@ -4,11 +4,10 @@ cloudflare_account_id = "your-cloudflare-account-id"
 project_name          = "chasethedeveloperv2"
 github_owner          = "your-github-username"
 github_repo           = "chasethedeveloperv2"
-custom_domain         = ""  # Optional: "chasethedeveloper.com"
 
 # AWS SES Configuration
 aws_region     = "us-east-1"
 aws_access_key = "your-aws-access-key"
 aws_secret_key = "your-aws-secret-key"
-ses_from_email = "noreply@chasethedeveloper.com"
+ses_from_email = "chase@thespencers.email"
 contact_email  = "your-email@example.com"
