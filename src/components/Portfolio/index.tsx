@@ -1,11 +1,6 @@
 import styles from './Portfolio.module.css';
 import { type JSX } from 'react';
-
-interface Project {
-  name: string;
-  url: string;
-  image: string;
-}
+import { type Project } from './types';
 
 const projects: Project[] = [
   { name: 'StockX', url: 'https://stockx.com', image: '/stockx.png' },

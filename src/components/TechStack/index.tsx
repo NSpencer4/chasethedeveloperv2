@@ -1,7 +1,8 @@
 import styles from './TechStack.module.css';
 import { type JSX } from 'react';
+import { type Technology } from './types';
 
-const technologies = [
+const technologies: Technology[] = [
   // Programming & Frameworks
   { name: 'TypeScript', icon: 'javascript', color: 'primary' },
   { name: 'React', icon: 'javascript', color: 'cyan' },
