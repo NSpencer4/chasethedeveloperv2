@@ -1,9 +1,5 @@
 import type { NextRequest } from 'next/server';
 
-export const config = {
-  runtime: 'edge',
-};
-
 type ContactRequest = {
   name: string;
   email: string;
