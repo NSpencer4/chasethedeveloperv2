@@ -107,8 +107,7 @@ export const jobs: Job[] = [
     isCurrent: false,
     bullets: [
       'Supported 13 Drupal 8 branded sites (Scotts.com, Miraclegro.com, Roundup.com, Ortho.com) and 10 Magento DTC stores (Scottsprogram.com, Mygro.com, Scottsdirect.com).',
-      'Drove multi-million-dollar sales across eCommerce platforms with optimized site performance and reliability.',
-      'Implemented monitoring solutions using New Relic and Sumo Logic, ensuring system reliability and performance.',
+      'Implemented monitoring solutions using New Relic and Sumo Logic, ensuring system reliability.',
       'Established Travis CI pipelines and contributed to scalable Magento 2 architecture design.',
       'Integrated Vantiv payment processing, enhancing security and payment capabilities.',
     ],
@@ -119,24 +118,7 @@ export const jobs: Job[] = [
       { name: 'Sumo Logic', color: 'purple' },
       { name: 'Travis CI', color: 'green' },
     ],
-  },
-  {
-    company: 'The Scotts Miracle-Gro Company',
-    position: 'eBusiness Intern',
-    period: 'May 2015 - Sept 2017',
-    isCurrent: false,
-    bullets: [
-      'Built internal web applications and REST APIs (Google App Engine/Python).',
-      'Implemented features using AngularJS/Angular 4 and supported Drupal 8 websites.',
-    ],
-    tech: [
-      { name: 'AngularJS', color: 'orange' },
-      { name: 'Angular', color: 'orange' },
-      { name: 'Python', color: 'cyan' },
-      { name: 'GAE', color: 'primary' },
-      { name: 'Drupal', color: 'primary' },
-    ],
-  },
+  }
 ];
 
 // Additional roles for resume
@@ -148,6 +130,13 @@ export interface AdditionalRole {
 }
 
 export const additionalExperience: AdditionalRole[] = [
+  {
+    company: 'The Scotts Miracle-Gro Company',
+    title: 'eBusiness Intern',
+    period: '2015-2017',
+    description:
+      'Built internal web applications and REST APIs (Google App Engine/Python) and implemented features using AngularJS/Angular 4 with Drupal 8 support.',
+  },
   {
     company: 'OmniSpear Web & Network Solutions',
     title: 'Web Development Intern',
