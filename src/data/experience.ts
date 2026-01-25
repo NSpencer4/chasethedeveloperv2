@@ -15,7 +15,8 @@ export const jobs: Job[] = [
     isCurrent: true,
     bullets: [
       'Built event-driven systems supporting Marketplace services (100k+ daily bid/ask placements) and Order services (30k+ daily orders).',
-      'Led cross-functional teams to architect state machine systems using CQRS, Sagas, and Event Sourcing patterns, expanding order system capabilities.',
+      'Designed and implemented state machine system architecture utilizing CQRS, Sagas and Event Sourcing design patterns optimizing for scalability and performance',
+      'Led cross-functional teams in designing and implementing multiple integration solutions that consistently expanded the capabilities of the order system',
       'Orchestrated microservices migration into NX mono-repo and established CI/CD pipelines (CircleCI, Terraform) for improved collaboration and continuous delivery.',
       'Developed a Next.js/React testing tool to simulate ordering scenarios and saga workflows, accelerating integration times across teams.',
       'Implemented Databricks dashboards and Monte Carlo data quality alerts, reducing customer support volume and resolving critical incidents that saved millions in potential revenue loss.',

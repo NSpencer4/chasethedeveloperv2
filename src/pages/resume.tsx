@@ -13,11 +13,11 @@ const contactInfo = {
 };
 
 const summary =
-  'Senior Software Engineer with 9+ years of experience designing and delivering high-scale, event-driven systems and eCommerce platforms. Skilled in distributed architectures, TypeScript/JavaScript, and AWS-based microservices. Proven leader and mentor, driving cross-functional teams to deliver maintainable, high-performance solutions.';
+  'Results-driven software engineer with 9+ years of experience translating ambiguous business requirements into effective, maintainable software solutions. Strong collaborator and mentor with a client-first mindset and a history of leading teams to successful delivery. Seeking opportunities to address diverse business problems using modern engineering practices.';
 
 const skills = {
   'Programming & Frameworks':
-    'TypeScript, JavaScript, React, Next.js, Angular, NestJS, ExpressJS, Kotlin, Spring Boot',
+    'TypeScript, React, Next.js, Angular, NestJS, ExpressJS, Kotlin, Spring Boot',
   'Cloud & Architecture':
     'AWS (Lambda, DynamoDB, SQS), Kafka, Event-Driven Systems, CQRS, Microservices',
   'DevOps & CI/CD': 'Terraform, CircleCI, GitLab CI',
