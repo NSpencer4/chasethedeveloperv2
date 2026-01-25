@@ -44,9 +44,9 @@ export const jobs: Job[] = [
     period: 'June 2021 - Oct 2021',
     isCurrent: false,
     bullets: [
-      'Developed NestJS microservices, delivering scalable backend systems.',
-      'Established an enterprise SDK monorepo using Lerna to manage shared modules across services.',
-      'Supported MyLawn App microservices, improving performance and maintainability.',
+      'Implemented eCommerce microservices using NestJS framework, delivering robust and scalable solutions.',
+      'Established a enterprise SDK monorepo with Lerna for efficient management of shared modules across microservices.',
+      'Enhanced MyLawn App microservices, improving functionality and performance.',
     ],
     tech: [
       { name: 'NestJS', color: 'cyan' },
