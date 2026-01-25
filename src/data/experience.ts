@@ -14,10 +14,10 @@ export const jobs: Job[] = [
     period: 'Nov 2021 - Present',
     isCurrent: true,
     bullets: [
-      'Built event-driven systems supporting Marketplace services (100k+ daily bid/ask placements) and Order services (30k+ daily orders).',
-      'Designed and implemented state machine system architecture utilizing CQRS, Sagas and Event Sourcing design patterns optimizing for scalability and performance.',
+      'Built Event-driven systems supporting Marketplace services (100k+ daily bid/ask placements) and Order services (30k+ daily orders).',
+      'Designed and implemented state machine system architecture utilizing CQRS, Sagas, and Event Sourcing design patterns, optimizing for scalability and performance.',
       'Led cross-functional teams in designing and implementing multiple integration solutions that consistently expanded the capabilities of the order system.',
-      'Orchestrated microservices migration into NX mono-repo and established CI/CD pipelines (CircleCI, Terraform) for improved collaboration and continuous delivery.',
+      'Orchestrated microservices migration into NX monorepo and established CI/CD pipelines (CircleCI, Terraform) for improved collaboration and continuous delivery.',
       'Developed a Next.js/React testing tool to simulate ordering scenarios and saga workflows, accelerating integration times across teams.',
       'Implemented Databricks dashboards and Monte Carlo data quality alerts, reducing customer support volume and resolving critical incidents that saved millions in potential revenue loss.',
     ],
@@ -41,7 +41,7 @@ export const jobs: Job[] = [
   {
     company: 'The Scotts Miracle-Gro Company',
     position: 'Senior Software Engineer, eBusiness',
-    period: 'June 2021 - Oct 2021',
+    period: 'Jun 2021 - Oct 2021',
     isCurrent: false,
     bullets: [
       'Implemented eCommerce microservices using NestJS framework, delivering robust and scalable solutions.',
@@ -57,7 +57,7 @@ export const jobs: Job[] = [
   {
     company: 'The Scotts Miracle-Gro Company',
     position: 'Tech Lead, Frontend Applications',
-    period: 'Nov 2020 - June 2021',
+    period: 'Nov 2020 - Jun 2021',
     isCurrent: false,
     bullets: [
       'Engineered event-driven architecture for Super Bowl LV sweepstakes processing 400k+ submissions using GCP Cloud Functions, Pub/Sub, and BigQuery.',
@@ -130,28 +130,28 @@ export const additionalExperience: AdditionalRole[] = [
   {
     company: 'The Scotts Miracle-Gro Company',
     title: 'eBusiness Intern',
-    period: '2015-2017',
+    period: '2015 - 2017',
     description:
       'Developed internal web applications and REST APIs using Google App Engine/Python; implemented features with AngularJS/Angular 4 and supported Drupal 8 sites.',
   },
   {
     company: 'OmniSpear Web & Network Solutions',
     title: 'Web Development Intern',
-    period: '2016–2017',
+    period: '2016 – 2017',
     description:
       'Developed features with Laravel, AngularJS, and WordPress/Drupal support.',
   },
   {
     company: 'Wright State University',
     title: 'Full-Stack Developer & Content Manager',
-    period: '2016–2017',
+    period: '2016 – 2017',
     description:
       'Maintained Django/AngularJS online courses for 2,000+ students.',
   },
   {
     company: 'Wright State University',
     title: 'Senior Technical Support Assistant',
-    period: '2014–2016',
+    period: '2014 – 2016',
     description:
       'Provided advanced technical support, supervised student workers, and maintained labs.',
   },

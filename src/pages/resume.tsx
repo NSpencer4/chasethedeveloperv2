@@ -17,7 +17,7 @@ const summary =
 
 const skills = {
   'Programming & Frameworks':
-    'TypeScript, React, Next.js, Angular, NestJS, ExpressJS, Kotlin, Spring Boot',
+    'TypeScript, React, NextJS, Angular, NestJS, Express, Kotlin, Spring Boot',
   'Cloud & Architecture':
     'AWS (Lambda, DynamoDB, SQS), Kafka, Event-Driven Systems, CQRS, Microservices',
   'DevOps & CI/CD': 'Terraform, CircleCI, GitLab CI',
@@ -27,7 +27,6 @@ const skills = {
 
 // Transform jobs data for resume format
 const experience = jobs
-  .filter(job => !job.isCurrent || job.company !== 'The Scotts Miracle-Gro Company' || job.position !== 'eBusiness Intern')
   .slice(0, 5); // Only show the top 5 positions
 
 const education = {
