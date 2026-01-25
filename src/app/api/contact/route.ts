@@ -1,3 +1,21 @@
+export const runtime = 'edge';
+export const dynamic = 'force-dynamic';
+
+// CORS headers helper
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+};
+
+// Handle OPTIONS preflight requests
+export async function OPTIONS() {
+  return new Response(null, {
+    status: 204,
+    headers: corsHeaders,
+  });
+}
+
 type ContactRequest = {
   name: string;
   email: string;
@@ -99,8 +117,6 @@ async function signRequest(
   };
 }
 
-export const runtime = 'edge';
-
 export async function POST(request: Request) {
   try {
     const { name, email, message, scraperCheck } = (await request.json()) as ContactRequest;
@@ -111,7 +127,7 @@ export async function POST(request: Request) {
         JSON.stringify({ success: false, message: 'Invalid submission' }),
         {
           status: 400,
-          headers: { 'Content-Type': 'application/json' },
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         }
       );
     }
@@ -122,7 +138,7 @@ export async function POST(request: Request) {
         JSON.stringify({ success: false, message: 'Missing required fields' }),
         {
           status: 400,
-          headers: { 'Content-Type': 'application/json' },
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         }
       );
     }
@@ -134,7 +150,7 @@ export async function POST(request: Request) {
         JSON.stringify({ success: false, message: 'Invalid email format' }),
         {
           status: 400,
-          headers: { 'Content-Type': 'application/json' },
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         }
       );
     }
@@ -149,7 +165,7 @@ export async function POST(request: Request) {
         JSON.stringify({ success: false, message: 'Email service not configured' }),
         {
           status: 500,
-          headers: { 'Content-Type': 'application/json' },
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         }
       );
     }
@@ -221,7 +237,7 @@ export async function POST(request: Request) {
         JSON.stringify({ success: false, message: 'Failed to send email' }),
         {
           status: 500,
-          headers: { 'Content-Type': 'application/json' },
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         }
       );
     }
@@ -230,7 +246,7 @@ export async function POST(request: Request) {
       JSON.stringify({ success: true, message: 'Email sent successfully' }),
       {
         status: 200,
-        headers: { 'Content-Type': 'application/json' },
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       }
     );
   } catch (error) {
@@ -239,7 +255,7 @@ export async function POST(request: Request) {
       JSON.stringify({ success: false, message: 'Failed to send email' }),
       {
         status: 500,
-        headers: { 'Content-Type': 'application/json' },
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       }
     );
   }
