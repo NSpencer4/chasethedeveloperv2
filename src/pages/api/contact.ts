@@ -1,26 +1,21 @@
-export const runtime = 'edge';
-export const dynamic = 'force-dynamic';
+import type { NextRequest } from 'next/server';
 
-// CORS headers helper
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'POST, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type',
+export const config = {
+  runtime: 'edge',
 };
-
-// Handle OPTIONS preflight requests
-export async function OPTIONS() {
-  return new Response(null, {
-    status: 204,
-    headers: corsHeaders,
-  });
-}
 
 type ContactRequest = {
   name: string;
   email: string;
   message: string;
   scraperCheck: string;
+};
+
+// CORS headers helper
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
 };
 
 // AWS Signature Version 4 signing utilities
@@ -117,9 +112,28 @@ async function signRequest(
   };
 }
 
-export async function POST(request: Request) {
+export default async function handler(req: NextRequest) {
+  // Handle OPTIONS preflight requests
+  if (req.method === 'OPTIONS') {
+    return new Response(null, {
+      status: 204,
+      headers: corsHeaders,
+    });
+  }
+
+  // Only allow POST requests
+  if (req.method !== 'POST') {
+    return new Response(
+      JSON.stringify({ success: false, message: 'Method not allowed' }),
+      {
+        status: 405,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      }
+    );
+  }
+
   try {
-    const { name, email, message, scraperCheck } = (await request.json()) as ContactRequest;
+    const { name, email, message, scraperCheck } = (await req.json()) as ContactRequest;
 
     // Honeypot check - if filled, it's likely a bot
     if (scraperCheck) {
