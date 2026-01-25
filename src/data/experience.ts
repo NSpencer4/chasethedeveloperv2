@@ -60,11 +60,12 @@ export const jobs: Job[] = [
     period: 'Nov 2020 - June 2021',
     isCurrent: false,
     bullets: [
-      'Led frontend team in building a component-based React/Storybook SDK.',
-      'Engineered an event-driven architecture for Super Bowl LV sweepstakes, processing 400k+ submissions using GCP Cloud Functions, Pub/Sub, and BigQuery.',
+      'Engineered event-driven architecture for Super Bowl LV sweepstakes (keepgrowingtoday.com), processing 400k+ submissions using GCP Cloud Functions, Pub/Sub, and BigQuery.',
+      'Led development team in building enterprise component SDK using React and Storybook with component-based architecture.',
+      'Collaborated with UI/UX teams to establish themeable component-based design system for branded sites.',
       'Developed enterprise websites using React and headless APIs aligned with organizational standards.',
-      'Integrated Contentful + GraphQL, streamlining content workflows.',
-      'Enhanced GitLab CI/CD pipelines, improving build reliability.',
+      'Implemented Contentful CMS with GraphQL integration, optimizing content management workflows.',
+      'Enhanced GitLab CI/CD pipelines to improve code quality and build reliability.',
     ],
     tech: [
       { name: 'React', color: 'cyan' },
