@@ -60,7 +60,7 @@ export const jobs: Job[] = [
     isCurrent: false,
     bullets: [
       'Engineered event-driven architecture for Super Bowl LV sweepstakes processing 400k+ submissions using GCP Cloud Functions, Pub/Sub, and BigQuery.',
-      'Led a development team building enterprise component SDK (React/Storybook) and themeable design system for branded sites.',
+      'Led a development team building an enterprise component SDK (React/Storybook) and themeable design system for branded sites.',
       'Implemented Contentful CMS with GraphQL integration and enhanced GitLab CI/CD pipelines for improved content workflows and build reliability.',
     ],
     tech: [
@@ -104,7 +104,7 @@ export const jobs: Job[] = [
     period: 'Oct 2017 - Sept 2018',
     isCurrent: false,
     bullets: [
-      'Supported 13 Drupal 8 branded sites and 10 Magento DTC stores, implementing monitoring with New Relic/Sumo Logic and Travis CI pipelines.',
+      'Supported 13 Drupal 8 branded sites and 10 Magento DTC stores, implementing monitoring with New Relic, Sumo Logic and Travis CI pipelines.',
       'Contributed to scalable Magento 2 architecture and integrated Vantiv payment processing for enhanced security.',
     ],
     tech: [
