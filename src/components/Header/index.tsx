@@ -7,7 +7,7 @@ export const Header = (): JSX.Element => {
       <div className={styles.headerContent}>
         <div className={styles.terminalInfo}>
           <span className={`material-symbols-outlined ${styles.terminalIcon}`}>terminal</span>
-          <h2 className={styles.terminalText}>user@portfolio:~$</h2>
+          <h2 className={styles.terminalText}>chase@portfolio (main)$</h2>
         </div>
         <div className={styles.trafficLights}>
           <div className={`${styles.dot} ${styles.dotRed}`}></div>
