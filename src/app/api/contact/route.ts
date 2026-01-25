@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-
 type ContactRequest = {
   name: string;
   email: string;

@@ -36,7 +36,7 @@ resource "cloudflare_pages_project" "portfolio" {
 
   build_config {
     build_command   = "npm run build:worker"
-    destination_dir = ".vercel/output/static"
+    destination_dir = ".open-next"
   }
 
   source {
@@ -55,7 +55,7 @@ resource "cloudflare_pages_project" "portfolio" {
 
   deployment_configs {
     production {
-      compatibility_date  = "2024-01-01"
+      compatibility_date  = "2024-09-22"
       compatibility_flags = ["nodejs_compat"]
 
       environment_variables = {
@@ -72,7 +72,7 @@ resource "cloudflare_pages_project" "portfolio" {
     }
 
     preview {
-      compatibility_date  = "2024-01-01"
+      compatibility_date  = "2024-09-22"
       compatibility_flags = ["nodejs_compat"]
 
       environment_variables = {
