@@ -99,13 +99,9 @@ async function signRequest(
   };
 }
 
-// Cloudflare Pages Function handler
-export async function onRequestPost(context: {
-  request: Request;
-  env: Record<string, string>;
-}): Promise<Response> {
-  const { request, env } = context;
+export const runtime = 'edge';
 
+export async function POST(request: Request) {
   try {
     const { name, email, message, scraperCheck } = (await request.json()) as ContactRequest;
 
@@ -143,9 +139,9 @@ export async function onRequestPost(context: {
       );
     }
 
-    const accessKeyId = env.AWS_ACCESS_KEY_ID;
-    const secretAccessKey = env.AWS_SECRET_ACCESS_KEY;
-    const region = env.AWS_REGION || 'us-east-1';
+    const accessKeyId = process.env.AWS_ACCESS_KEY_ID;
+    const secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY;
+    const region = process.env.AWS_REGION || 'us-east-1';
 
     if (!accessKeyId || !secretAccessKey) {
       console.error('AWS credentials are not configured');
@@ -158,8 +154,8 @@ export async function onRequestPost(context: {
       );
     }
 
-    const toEmail = env.CONTACT_EMAIL || 'n.chase.spencer@gmail.com';
-    const fromEmail = env.SES_FROM_EMAIL || 'noreply@chasethedeveloper.com';
+    const toEmail = process.env.CONTACT_EMAIL || 'n.chase.spencer@gmail.com';
+    const fromEmail = process.env.SES_FROM_EMAIL || 'noreply@chasethedeveloper.com';
 
     const sesPayload = {
       Content: {
