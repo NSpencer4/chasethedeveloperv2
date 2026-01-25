@@ -14,8 +14,7 @@
     "jsx-a11y",
     "jest",
     "@typescript-eslint",
-    "react",
-    "react-hooks"
+    "react"
   ],
   "globals": {
     "React": true,
