@@ -36,7 +36,7 @@ resource "cloudflare_pages_project" "portfolio" {
 
   build_config {
     build_command   = "npm run build"
-    destination_dir = ".open-next"
+    destination_dir = "out"
   }
 
   source {
