@@ -23,7 +23,7 @@ const projects: Project[] = [
 export const Portfolio = (): JSX.Element => {
   return (
     <section data-testid="portfolio-section" className={styles.section}>
-      <h3 className={styles.sectionHeader}>{'// 04. Projects'}</h3>
+      <h3 className={styles.sectionHeader}>{'// 05. Projects'}</h3>
       <div className={styles.projectGrid}>
         {projects.map((project) => (
           <a

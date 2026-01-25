@@ -32,7 +32,7 @@ export const Contact = () => {
 
   return (
     <section data-testid="contact-section" className={styles.section}>
-      <h3 className={styles.sectionHeader}>{'// 05. Connect'}</h3>
+      <h3 className={styles.sectionHeader}>{'// 06. Connect'}</h3>
 
       <div className={styles.terminalBox}>
         <div className={styles.terminalPrompt}>

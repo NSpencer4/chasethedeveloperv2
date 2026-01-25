@@ -1,0 +1,70 @@
+.section {
+  margin-top: 3rem;
+}
+
+.sectionHeader {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--terminal-grey);
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background-color: var(--surface-dark);
+  padding: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--border-dark);
+  transition: border-color 0.2s;
+}
+
+.card:hover {
+  border-color: rgba(43, 140, 238, 0.3);
+}
+
+.header {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
+}
+
+.company {
+  color: #fff;
+  font-weight: 600;
+}
+
+.separator {
+  color: var(--terminal-grey);
+}
+
+.title {
+  color: var(--terminal-cyan);
+}
+
+.period {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--terminal-orange);
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -4,7 +4,7 @@ import { type JSX } from 'react';
 export const Education = (): JSX.Element => {
   return (
     <section data-testid="education-section" className={styles.section}>
-      <h3 className={styles.sectionHeader}>{'// 03. Education'}</h3>
+      <h3 className={styles.sectionHeader}>{'// 04. Education'}</h3>
       <div className={styles.timelineWrapper}>
         <div className={styles.timelineItem}>
           <div className={styles.commitDot}></div>
