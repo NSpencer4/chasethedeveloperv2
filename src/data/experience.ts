@@ -21,7 +21,7 @@ export const jobs: Job[] = [
       'Accelerated integration times by providing GraphQL development support to cross-functional teams.',
       'Orchestrated microservices migration into an NX mono-repo, improving code management and collaboration.',
       'Established CI/CD pipelines using CircleCI and Terraform for continuous delivery.',
-      'Developed an internal testing tool (Next.js + React) enabling rapid simulation of ordering scenarios and saga patterns.',
+      'Developed an internal testing tool (Next.js + React) enabling rapid simulation of ordering scenarios and saga workflows.',
       'Resolved critical on-call incidents, delivering solutions that saved the company millions in potential revenue loss.',
       'Implemented Databricks dashboards and Monte Carlo alerts to identify data anomalies, reducing customer support contacts.',
     ],
