@@ -35,7 +35,7 @@ resource "cloudflare_pages_project" "portfolio" {
   production_branch = "main"
 
   build_config {
-    build_command   = "npm run build:worker"
+    build_command   = "npm run build"
     destination_dir = ".open-next"
   }
 
