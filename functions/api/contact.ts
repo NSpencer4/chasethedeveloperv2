@@ -1,17 +1,16 @@
-import type { NextRequest } from 'next/server';
+interface Env {
+  AWS_ACCESS_KEY_ID: string;
+  AWS_SECRET_ACCESS_KEY: string;
+  AWS_REGION: string;
+  SES_FROM_EMAIL: string;
+  CONTACT_EMAIL: string;
+}
 
 type ContactRequest = {
   name: string;
   email: string;
   message: string;
   scraperCheck: string;
-};
-
-// CORS headers helper
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'POST, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type',
 };
 
 // AWS Signature Version 4 signing utilities
@@ -108,37 +107,26 @@ async function signRequest(
   };
 }
 
-export default async function handler(req: NextRequest) {
-  // Handle OPTIONS preflight requests
-  if (req.method === 'OPTIONS') {
-    return new Response(null, {
-      status: 204,
-      headers: corsHeaders,
-    });
-  }
+// CORS headers helper
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+  'Content-Type': 'application/json',
+};
 
-  // Only allow POST requests
-  if (req.method !== 'POST') {
-    return new Response(
-      JSON.stringify({ success: false, message: 'Method not allowed' }),
-      {
-        status: 405,
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      }
-    );
-  }
+// Cloudflare Pages Function handler
+export async function onRequestPost(context: { request: Request; env: Env }) {
+  const { request, env } = context;
 
   try {
-    const { name, email, message, scraperCheck } = (await req.json()) as ContactRequest;
+    const { name, email, message, scraperCheck } = (await request.json()) as ContactRequest;
 
     // Honeypot check - if filled, it's likely a bot
     if (scraperCheck) {
       return new Response(
         JSON.stringify({ success: false, message: 'Invalid submission' }),
-        {
-          status: 400,
-          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-        }
+        { status: 400, headers: corsHeaders }
       );
     }
 
@@ -146,10 +134,7 @@ export default async function handler(req: NextRequest) {
     if (!name || !email || !message) {
       return new Response(
         JSON.stringify({ success: false, message: 'Missing required fields' }),
-        {
-          status: 400,
-          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-        }
+        { status: 400, headers: corsHeaders }
       );
     }
 
@@ -158,30 +143,24 @@ export default async function handler(req: NextRequest) {
     if (!emailRegex.test(email)) {
       return new Response(
         JSON.stringify({ success: false, message: 'Invalid email format' }),
-        {
-          status: 400,
-          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-        }
+        { status: 400, headers: corsHeaders }
       );
     }
 
-    const accessKeyId = process.env.AWS_ACCESS_KEY_ID;
-    const secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY;
-    const region = process.env.AWS_REGION || 'us-east-1';
+    const accessKeyId = env.AWS_ACCESS_KEY_ID;
+    const secretAccessKey = env.AWS_SECRET_ACCESS_KEY;
+    const region = env.AWS_REGION || 'us-east-1';
 
     if (!accessKeyId || !secretAccessKey) {
       console.error('AWS credentials are not configured');
       return new Response(
         JSON.stringify({ success: false, message: 'Email service not configured' }),
-        {
-          status: 500,
-          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-        }
+        { status: 500, headers: corsHeaders }
       );
     }
 
-    const toEmail = process.env.CONTACT_EMAIL || 'n.chase.spencer@gmail.com';
-    const fromEmail = process.env.SES_FROM_EMAIL || 'noreply@chasethedeveloper.com';
+    const toEmail = env.CONTACT_EMAIL || 'n.chase.spencer@gmail.com';
+    const fromEmail = env.SES_FROM_EMAIL || 'noreply@chasethedeveloper.com';
 
     const sesPayload = {
       Content: {
@@ -245,28 +224,27 @@ export default async function handler(req: NextRequest) {
       console.error('SES error:', response.status, errorText);
       return new Response(
         JSON.stringify({ success: false, message: 'Failed to send email' }),
-        {
-          status: 500,
-          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-        }
+        { status: 500, headers: corsHeaders }
       );
     }
 
     return new Response(
       JSON.stringify({ success: true, message: 'Email sent successfully' }),
-      {
-        status: 200,
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      }
+      { status: 200, headers: corsHeaders }
     );
   } catch (error) {
-    console.error('SES error:', error);
+    console.error('Error:', error);
     return new Response(
       JSON.stringify({ success: false, message: 'Failed to send email' }),
-      {
-        status: 500,
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      }
+      { status: 500, headers: corsHeaders }
     );
   }
+}
+
+// Handle OPTIONS preflight requests
+export async function onRequestOptions() {
+  return new Response(null, {
+    status: 204,
+    headers: corsHeaders,
+  });
 }

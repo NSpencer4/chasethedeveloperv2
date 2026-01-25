@@ -12,6 +12,7 @@ node_modules
 /.next/
 /out/
 dist
+.vercel
 
 # production
 /build
@@ -34,9 +35,7 @@ package-lock.json
 
 # cloudflare
 .wrangler
-
-# vercel
-.vercel
+.dev.vars
 
 # IDE
 .idea
@@ -48,5 +47,3 @@ package-lock.json
 *.tfstate.*
 terraform.tfvars
 *.auto.tfvars
-
-.open-next
