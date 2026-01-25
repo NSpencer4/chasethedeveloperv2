@@ -38,7 +38,7 @@ export const Hero = (): JSX.Element => {
                     </p>
 
                     <Link href="/resume" className={styles.resumeLink}>
-                        <span className={styles.resumeIcon}>&#x2B73;</span>
+                        <span className={styles.resumeIcon}>▸</span>
                         <span>View Resume</span>
                     </Link>
                 </div>
