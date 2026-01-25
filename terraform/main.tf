@@ -55,7 +55,7 @@ resource "cloudflare_pages_project" "portfolio" {
 
   deployment_configs {
     production {
-      compatibility_date  = "2024-09-22"
+      compatibility_date  = "2024-09-23"
       compatibility_flags = ["nodejs_compat"]
 
       environment_variables = {
@@ -72,7 +72,7 @@ resource "cloudflare_pages_project" "portfolio" {
     }
 
     preview {
-      compatibility_date  = "2024-09-22"
+      compatibility_date  = "2024-09-23"
       compatibility_flags = ["nodejs_compat"]
 
       environment_variables = {

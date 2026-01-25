@@ -1,4 +1,5 @@
 import styles from './Education.module.css';
+import { type JSX } from 'react';
 
 export const Education = (): JSX.Element => {
   return (

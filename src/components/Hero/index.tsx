@@ -1,6 +1,7 @@
 import cn from 'classnames';
 import Link from 'next/link';
 import styles from './Hero.module.css';
+import { type JSX } from 'react';
 
 export const Hero = (): JSX.Element => {
   return (

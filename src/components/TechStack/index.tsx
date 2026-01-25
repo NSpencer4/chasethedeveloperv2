@@ -1,4 +1,5 @@
 import styles from './TechStack.module.css';
+import { type JSX } from 'react';
 
 const technologies = [
   // Programming & Frameworks

@@ -1,5 +1,6 @@
 import cn from 'classnames';
 import styles from './Intro.module.css';
+import { type JSX } from 'react';
 
 export const Intro = (): JSX.Element => {
   return (

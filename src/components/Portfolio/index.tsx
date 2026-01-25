@@ -1,4 +1,5 @@
 import styles from './Portfolio.module.css';
+import { type JSX } from 'react';
 
 interface Project {
   name: string;

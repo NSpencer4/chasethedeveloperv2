@@ -1,5 +1,6 @@
 import styles from './Experience.module.css';
 import cn from 'classnames';
+import { type JSX } from 'react';
 
 interface Job {
   company: string;

@@ -1,4 +1,5 @@
 import styles from './Header.module.css';
+import { type JSX } from 'react';
 
 export const Header = (): JSX.Element => {
   return (
