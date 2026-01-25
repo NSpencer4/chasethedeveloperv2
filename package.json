@@ -12,6 +12,7 @@
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "tail.prod": "wrangler pages deployment tail --project-name chasethedeveloperv2",
     "start": "next start",
     "lint": "eslint src --fix",
     "test": "jest",
