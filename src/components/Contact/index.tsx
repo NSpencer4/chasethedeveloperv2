@@ -37,7 +37,9 @@ export const Contact = () => {
       <div className={styles.terminalBox}>
         <div className={styles.terminalPrompt}>
           <span className={styles.promptSymbol}>$</span>
-          <span className={styles.promptCommand}>curl -X POST /api/contact -H "Content-Type: application/json"</span>
+          <span className={styles.promptCommand}>
+            curl -X POST /api/contact
+          </span>
         </div>
         <div className={styles.terminalOutput}>
           <div className={styles.jsonLine}>
