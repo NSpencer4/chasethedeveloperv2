@@ -6,8 +6,8 @@ import { jobs, additionalExperience, formatPeriodForResume } from '../data/exper
 const contactInfo = {
   name: 'Chase Spencer',
   title: 'Senior Software Engineer',
-  location: 'Columbus, Ohio Metropolitan Area',
-  email: 'n.chase.spencer@gmail.com',
+  location: 'Plain City, Ohio',
+  email: 'chase@thespencers.email',
   linkedin: 'linkedin.com/in/chase-spencer4',
   website: 'chasespencer.dev',
 };
