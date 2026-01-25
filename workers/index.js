@@ -27,10 +27,23 @@ addEventListener('fetch', event => {
 })
 
 async function handleRequest(request) {
+    if (request.method === 'OPTIONS') {
+        return new Response(null, {
+            status: 204,
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Max-Age': '86400', // Cache preflight
+            },
+        });
+    }
+
     // Check the HTTP method
     if (request.method === 'POST') {
         return handlePost(request);
     }
+
     return handleFetchEvent(request);
 }
 
