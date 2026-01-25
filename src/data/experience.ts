@@ -45,8 +45,8 @@ export const jobs: Job[] = [
     isCurrent: false,
     bullets: [
       'Implemented eCommerce microservices using NestJS framework, delivering robust and scalable solutions.',
-      'Established a enterprise SDK monorepo with Lerna for efficient management of shared modules across microservices.',
-      'Enhanced MyLawn App microservices, improving functionality and performance.',
+      'Established an enterprise SDK monorepo with Lerna for efficient management of shared modules across microservices.',
+      'Enhanced MyLawn App microservices (NestJS), improving functionality and performance.',
     ],
     tech: [
       { name: 'NestJS', color: 'orange' },
@@ -84,7 +84,7 @@ export const jobs: Job[] = [
     isCurrent: false,
     bullets: [
       'Developed full-stack features for market.cardinalhealth.com, a B2B medical eCommerce SPA generating $1B+ in annual revenue using Angular, Spring Boot, and AEM headless CMS.',
-      'Led Angular 2 → 7 upgrade achieving 80% performance improvement and architected micro-frontend strategy using Web Components for parallel team development.',
+      'Implemented Angular 2 → 7 upgrade achieving 80% performance improvement and architected micro-frontend strategy using Web Components for parallel team development.',
       'Integrated Paymetric payment processing, implemented Concourse CI pipelines, and led analytics initiatives using Adobe Analytics/Target for data-driven decision-making.',
     ],
     tech: [
@@ -132,7 +132,7 @@ export const additionalExperience: AdditionalRole[] = [
     title: 'eBusiness Intern',
     period: '2015-2017',
     description:
-      'Built internal web applications and REST APIs (Google App Engine/Python) and implemented features using AngularJS/Angular 4 with Drupal 8 support.',
+      'Developed internal web applications and REST APIs using Google App Engine/Python; implemented features with AngularJS/Angular 4 and supported Drupal 8 sites.',
   },
   {
     company: 'OmniSpear Web & Network Solutions',
