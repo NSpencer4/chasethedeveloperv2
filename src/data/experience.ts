@@ -61,9 +61,9 @@ export const jobs: Job[] = [
     isCurrent: false,
     bullets: [
       'Engineered event-driven architecture for Super Bowl LV sweepstakes (keepgrowingtoday.com), processing 400k+ submissions using GCP Cloud Functions, Pub/Sub, and BigQuery.',
-      'Led development team in building enterprise component SDK using React and Storybook with component-based architecture.',
+      'Led a development team in building a enterprise component SDK using React and Storybook with component-based architecture.',
       'Collaborated with UI/UX teams to establish themeable component-based design system for branded sites.',
-      'Developed enterprise websites using React and headless APIs aligned with organizational standards.',
+      'Oversaw the development of enterprise websites (NextJS + React)',
       'Implemented Contentful CMS with GraphQL integration, optimizing content management workflows.',
       'Enhanced GitLab CI/CD pipelines to improve code quality and build reliability.',
     ],
