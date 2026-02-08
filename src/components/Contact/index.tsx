@@ -44,7 +44,7 @@ export const Contact = () => {
         <div className={styles.terminalOutput}>
           <div className={styles.jsonLine}>
             <span className={styles.jsonKey}>"email":</span>
-            <span className={styles.jsonValue}>"chase@thespencers.email"</span>
+            <span className={styles.jsonValue}>"n.chase.spencer@gmail.com"</span>
           </div>
           <div className={styles.jsonLine}>
             <span className={styles.jsonKey}>"github":</span>

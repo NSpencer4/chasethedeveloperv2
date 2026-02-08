@@ -7,7 +7,7 @@ const contactInfo = {
   name: 'Chase Spencer',
   title: 'Senior Software Engineer',
   location: 'Plain City, Ohio',
-  email: 'chase@thespencers.email',
+  email: 'n.chase.spencer@gmail.com',
   linkedin: 'linkedin.com/in/chase-spencer4',
   website: 'chasespencer.dev',
 };

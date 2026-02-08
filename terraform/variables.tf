@@ -28,7 +28,7 @@ variable "github_repo" {
 variable "contact_email" {
   description = "Email address to receive contact form submissions"
   type        = string
-  default     = "chase@thespencers.email"
+  default     = "n.chase.spencer@gmail.com"
 }
 
 # AWS Configuration
@@ -53,5 +53,5 @@ variable "aws_secret_key" {
 variable "ses_from_email" {
   description = "Verified email address to send from via SES"
   type        = string
-  default     = "chase@thespencers.email"
+  default     = "n.chase.spencer@gmail.com"
 }
